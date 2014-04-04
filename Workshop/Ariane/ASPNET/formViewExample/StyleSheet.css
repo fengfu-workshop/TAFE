@@ -1,0 +1,26 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custId {
+    width: 350px;
+    background-color: #CC0077;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.customer {
+    background-color: #EEE;
+    width: 350px;
+}
+
+.pageLeft {
+    float: left;
+}
+
+.pageRight {
+    float: right;
+    /*white-sapce: nowrap;*/
+}

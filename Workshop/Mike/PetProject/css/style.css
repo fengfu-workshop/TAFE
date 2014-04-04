@@ -1,0 +1,300 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.clear_fix:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.disappear {
+	display: none;
+}
+
+.exterior {
+	width: 1060px;
+	margin: 0 auto;
+}
+
+.interior {
+	width: 960px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: Arial,	Courier, "Arial	Black";
+	text-shadow: 0 -1px 1px #BBB;
+	background-image: url("../img/tile.png");
+}
+
+a {
+	text-decoration: none;
+}
+
+body a:hover {
+	color: #55FF55;
+}
+
+header {
+	background-image: url("../img/HeaderEmpty.png");
+	height: 110px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.hnav {
+	position: absolute;
+	right: 52px;
+	top: 30px;
+}
+
+.hnav a {
+	display: inline-block;
+	width: 86px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #000;
+	font-size: 0.9em;
+	text-shadow: 0 1px 1px #363636;
+}
+
+.hnav a:hover {
+	background-image: url(../img/transparent.gif);
+	color: #000;
+}
+
+.path {
+	margin: 20px 0 0 60px;
+}
+
+.pet_project {
+	position: absolute;
+	font-family: Courier, Arial,	"Arial	Black";
+	font-size: 2.6em;
+	left: 147px;
+	top: 32px;
+	font-weight: bold;
+}
+
+.pet {
+	color: #F8F8F8;
+	text-shadow:  0 -2px 5px #333333;
+}
+
+.project {
+	margin-left: 10px;
+	text-shadow: 0 -2px 5px #EDF0A7;
+}
+
+.hero {
+	position: relative;
+	height: 500px;
+	z-index: -1;
+}
+
+.hero img {
+	position: absolute;
+	top: -30px;
+}
+
+.promotion {
+	position: absolute;
+	right: 0;
+	top: -30px;
+}
+
+.blackbox {
+	position: absolute;
+	right: 0;
+	top: -30px;
+	height: 520px;
+	width: 420px;
+	background-color: #000;
+	opacity: 0.9;
+	text-shadow: 0 1px 1px #000;
+}
+
+.keep {
+	position: absolute;
+	color: #666666;
+	font-size: 2.5em;
+	top: 40px;
+	left: 40px;
+	font-weight: bold;
+	text-shadow: 4px 0px 0px #666;
+}
+
+.leash {
+	position: absolute;
+	left: 220px;
+	top: 140px;
+	color: #FF9E06;
+	font-stretch: expanded;
+
+	-moz-transform: scale(3.8, 2) rotate(-38deg) skewX(-26deg);
+	-webkit-transform: scale(3.8, 2) rotate(-38deg) skewX(-26deg);
+	-o-transform: scale(3.8, 2) rotate(-38deg) skewX(-26deg);
+	-ms-transform: scale(3.8, 2) rotate(-38deg) skewX(-26deg);
+	transform: scale(3.8, 2) rotate(-38deg) skewX(-26deg);
+
+}
+
+.onyour {
+	position: absolute;
+	left: 230px;
+	top: 190px;
+	color: #666666;
+
+	-moz-transform: scale(3,1) rotate(-50deg) skewX(-40deg);
+	-webkit-transform: scale(3,1) rotate(-50deg) skewX(-40deg);
+	-o-transform: scale(3,1) rotate(-50deg) skewX(-40deg);
+	-ms-transform: scale(3,1) rotate(-50deg) skewX(-40deg);
+	transform: scale(3,1) rotate(-50deg) skewX(-40deg);
+}
+
+.blackbox img {
+	left: 5px;
+	top: 118px;
+}
+
+.getour {
+	position: absolute;
+	color: #FF9E06;
+	top: 480px;
+	left: 40px;
+	font-size: 1.2em;
+}
+
+.functions {
+	width: 780px;
+	margin: 20px auto;
+}
+
+.functions figcaption {
+	margin: 15px  auto;
+	font-size: 1.6em;
+	font-weight: 100;
+	text-shadow: 0 1px 1px #363636;
+}
+
+.functions section {
+	float: left;
+	margin: 20px;
+	text-align: center;
+	width: 220px;
+}
+
+.functions p {
+	color: #777;
+}
+
+.functions a {
+	color: #FF9E06;
+}
+
+.welcome {
+	margin: 30px auto 50px auto;
+	height: 50px;
+	background-color: #FF9E07;
+	line-height: 50px;
+	color: #FFF;
+	font-size: 1.6em;
+
+	-moz-box-shadow: 0px 0px 15px #aaaaaa;
+	-webkit-box-shadow: 0px 0px 15px #aaaaaa;
+	box-shadow: 0px 0px 15px #555;
+}
+
+.welcome span {
+	color: #111;
+}
+
+.welcome_content {
+	color: #777;
+	font-size: 0.9em;
+}
+
+.left {
+	float: left;
+	width: 680px;
+	padding: 0 20px;
+}
+
+.left a {
+	color: #FF9E06;
+}
+
+.right {
+	float: left;
+	width: 200px;
+	background-color: #FF9E07;
+	padding: 15px;
+
+	-moz-border-radius: 10px 50px 10px 10px;
+	-webkit-border-radius: 10px 50px 10px 10px;
+	border-radius: 10px 50px 10px 10px;
+}
+
+.right h3 {
+	font-size: 1.4em;
+	color: #EEE;
+	padding: 10px 0;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #363636;
+}
+
+.right h4 {
+	color: #EEE;
+	padding: 10px 0;
+	font-weight: normal;
+}
+
+.site_map {
+	background: #333 url(../img/CompositePath1.png) no-repeat 95% 50%;
+	height: 170px;
+	margin-top: 40px;
+	color: #CCC;
+	
+	-moz-border-radius: 0 0 80px 10px;
+	-webkit-border-radius: 0 0 80px 10px;
+	border-radius: 0 0 80px 10px;
+}
+
+.vnav {
+	padding: 20px 30px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.vnav li {
+	list-style: none;
+	margin: 3px 0;
+}
+
+.vnav a {
+	color: #999;
+	font-size: 0.8em;
+}
+
+footer {
+	color: #777;
+	padding: 15px 0px 40px 0px;
+	font-size: 0.8em;
+}
+
+.footer_left {
+	float: left;
+	padding-left: 30px;
+}
+
+.footer_right {
+	float: right;
+	padding-right: 60px;
+}
+

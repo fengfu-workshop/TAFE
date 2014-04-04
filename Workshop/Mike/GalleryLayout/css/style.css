@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.clear_fix:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+p, ul, h3 {
+	margin: 10px;
+}
+
+body {
+	background-color: #cccccc;
+}
+
+.wrapper {
+	background-color: white;
+	width: 900px;
+	margin: 0 auto;
+	padding: 20px 30px;
+}
+
+header {
+	background-color: gray;
+	width: 900px;
+	height: 180px;
+	margin-bottom: 20px;
+}
+
+aside {
+	float: left;
+	background-color: #888;
+	width: 300px;
+	/*height: 500px;*/
+	margin-right: 20px;
+}
+
+section {
+	float: left;
+	background-color: #aaa;
+	width: 580px;
+	/*height: 500px;*/
+}
+
+footer {
+	clear: both;
+	background-color: gray;
+	width: 900px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+/* Start of Gallery Layout */
+
+.logo, .contact {
+	width: 250px;
+	height: 160px;
+	margin: 10px;	
+	display: table;
+	background-color: #ccc;
+}
+
+.logo h1 {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.logo {
+	float: left;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.contact {
+	float:	right;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+.message {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.main_part {
+	overflow: hidden;
+}
+
+aside, section {
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+
+.navigation {
+	margin: 10px 0 0 10px;
+}
+
+.navigation_items {
+	list-style: none;
+	margin-left: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.title {
+	margin: 20px 0 0 20px;
+}
+
+.picture {
+	float: left;
+	width: 150px;
+	height: 250px;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.picture img {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+}
+
+.description {
+	margin: 10px 0;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	line-height: 40px;
+}

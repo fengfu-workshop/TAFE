@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NextStep.master.cs" Inherits="MasterPages_NextStep" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/modernizer.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+		<header class="clear_fix">
+			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
+			<a href="#"><img class="shopping_cart" src="/Images/shopping_cart.png" alt="Shopping Cart" /></a>
+			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
+		</header>
+		<nav class="hnav">
+			<a href="/">Home</a>
+			<a href="/Test/About.aspx">About</a>
+			<a href="/Test/Products.aspx">Products</a>
+			<a href="/Test/ContactUs.aspx">Contact Us</a>
+			<a href="/Test/Logon.aspx">Log on</a>
+		</nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <footer>
+			&copy; NextStep Sport Inc.
+		</footer>
+    </div>
+    </form>
+</body>
+</html>

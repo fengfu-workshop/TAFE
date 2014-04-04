@@ -1,0 +1,45 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, 'Helvetica Neue', sans-serif;
+}
+
+header {
+    border-top: solid 10px #FB6904;
+    border-bottom: solid 1px #FB6904;
+}
+
+nav {
+    border-right: solid 1px #FB6904;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+    nav li {
+        list-style-type: none;
+        border-bottom: solid 1px #FB6904;
+        padding: 5px;
+    }
+
+    nav a {
+        color: #000;
+        text-decoration: none;
+    }
+
+footer {
+    clear: both;
+    background-color: #808080;
+    color: #FFF;
+    font-size: 80%;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

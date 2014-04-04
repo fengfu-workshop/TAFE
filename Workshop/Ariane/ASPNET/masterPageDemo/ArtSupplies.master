@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ArtSupplies.master.cs" Inherits="ArtSupplies" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <asp:HyperLink ID="hplHome" runat="server" ImageUrl="~/images/artSuppliesLogo.gif" NavigateUrl="#">Art Supplies</asp:HyperLink>
+         </header>
+        <nav>
+            <asp:BulletedList ID="blNavagation" runat="server">
+                <asp:ListItem>Painting</asp:ListItem>
+                <asp:ListItem>Drawing</asp:ListItem>
+                <asp:ListItem>Craft</asp:ListItem>
+                <asp:ListItem>Clay</asp:ListItem>
+                <asp:ListItem>Sculptue</asp:ListItem>
+                <asp:ListItem>One more Item</asp:ListItem>
+            </asp:BulletedList>
+        </nav>
+        <div>
+            <h1><asp:Literal ID="liHeading" runat="server"></asp:Literal></h1>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <p>&copy 2020 Art Supplies <asp:Label ID="lblDate" runat="server" Text="Label"></asp:Label></p>
+        </footer>
+    </form>
+</body>
+</html>

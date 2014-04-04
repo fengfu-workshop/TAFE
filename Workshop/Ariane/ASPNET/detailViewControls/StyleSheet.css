@@ -1,0 +1,22 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.alternatingRowStyle {
+    background-color: #FFFFCC;
+}
+
+.fieldHeader {
+    background-color: #0099FF;
+    font-weight: bold;
+    color: #FFF;
+    width: 150px;
+}
+
+.heading {
+    font-size: 150%;
+    background-color: #0099FF;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFCC;
+}

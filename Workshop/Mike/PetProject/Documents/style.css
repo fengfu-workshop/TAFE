@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.clear_fix:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.wrap {
+	position: relative;
+	width: 1460px;
+}
+
+nav {
+	float: left;
+	width: 160px;
+	position: fixed;
+	left: 10px;
+	top: 10px;
+}
+
+.content {
+	float: right;
+	width: 1280px;
+}
+
+a {
+	display: block;
+	height: 25px;
+	text-decoration: none;
+}
+
+h2 {
+	background-color: #DDD;
+	text-align: center;
+	padding: 20px 0;
+	color: white;
+	margin-bottom: 10px;
+}
+

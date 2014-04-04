@@ -1,0 +1,18 @@
+﻿body {
+}
+
+.myClass
+{
+    font-family: Arial;
+    font-size: 14px;
+    text-align: right;
+    color: Fuchsia;
+}
+
+.secondClass
+{
+    font-family: Consolas;
+    font-size: 20px;
+    text-align: left;
+    color: blue;
+}
