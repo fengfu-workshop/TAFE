@@ -10,6 +10,8 @@
     </asp:ContentPlaceHolder>
     <link href="../StyleSheets/style.css" rel="stylesheet" type="text/css" />
     <script src="/Scripts/modernizer.min.js"></script>
+    <script src="/Scripts/jquery-2.1.0.min.js"></script>
+    <script src="../Scripts/jquery.zoom.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,8 +24,8 @@
 		<nav class="hnav">
 			<a href="/">Home</a>
 			<a href="/Test/About.aspx">About</a>
-			<a href="/Test/Products.aspx">Products</a>
-			<a href="/Test/ContactUs.aspx">Contact Us</a>
+			<a href="/Test/ItemsSearch.aspx">Products</a>
+			<a href="/WebPages/ContactUs.aspx">Contact Us</a>
 			<a href="/Test/Logon.aspx">Log on</a>
 		</nav>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">

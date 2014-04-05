@@ -13,6 +13,11 @@
     line-height: 0;
 }
 
+body {
+	font-family: Arial,	Courier, "Arial	Black";
+	text-shadow: 0 -1px 1px #BBB;
+}
+
 .wrap {
 	position: relative;
 	width: 1460px;
@@ -34,14 +39,26 @@ nav {
 a {
 	display: block;
 	height: 25px;
+	line-height: 25px;
 	text-decoration: none;
+	background-color: #EEE;
+	margin-bottom: 7px;
+	padding-left: 3px;
+	-webkit-box-shadow: 1px 1px 1px 1px #AAA;
+	box-shadow: 1px 1px 1px 1px #AAA;
+	-webkit-border-radius: 0 0 10px 0;
+	border-radius: 0 0 10px 0;
+	font-size: 90%;
 }
 
 h2 {
-	background-color: #DDD;
+	background-color: #EEE;
 	text-align: center;
 	padding: 20px 0;
-	color: white;
-	margin-bottom: 10px;
+	margin: 10px 0;
+	-webkit-box-shadow: 1px 1px 3px 3px #AAA;
+	box-shadow: 1px 1px 3px 3px #AAA;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
 }
 
