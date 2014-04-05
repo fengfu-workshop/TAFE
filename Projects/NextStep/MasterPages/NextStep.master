@@ -23,7 +23,7 @@
 			<a href="/">Home</a>
 			<a href="/Test/About.aspx">About</a>
 			<a href="/Test/Products.aspx">Products</a>
-			<a href="/Test/ContactUs.aspx">Contact Us</a>
+			<a href="/WebPages/ContactUs.aspx">Contact Us</a>
 			<a href="/Test/Logon.aspx">Log on</a>
 		</nav>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
