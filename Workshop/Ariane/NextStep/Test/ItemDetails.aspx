@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="ItemDetails.aspx.cs" Inherits="Test_ItemDetails" %>
+﻿<%@ Page Title="Item Details" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="ItemDetails.aspx.cs" Inherits="Test_ItemDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -12,7 +12,7 @@
             </EmptyDataTemplate>
             <ItemTemplate>
                 <div class="item_left shadow_box">
-                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoName", "~/Images/Items/{0}") %>' />
+                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoName", "~/Images/Items/{0}") %>' AlternateText="Photo coming soon" />
                 </div>
                 <div class="item_right">
                     <h2>
@@ -27,9 +27,9 @@
                     <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("Description") %>' CssClass="description" />
                     <br />
                     <div class="shopping_cart">
-                        Qty: <asp:TextBox ID="TextBox1" runat="server" Width="50px" Text="1"></asp:TextBox>
+                        Quantity: <asp:TextBox ID="TextBox1" runat="server" Width="30px" Text="1" Height="30px"></asp:TextBox>
                         <a href="#">
-                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/AddToCart.png" />
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" />
                         </a>
                     </div>
 

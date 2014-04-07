@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Test_Contact" %>
+﻿<%@ Page Title="Contact Us" Language="C#" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Test_Contact" %>
 
 <!DOCTYPE html>
 

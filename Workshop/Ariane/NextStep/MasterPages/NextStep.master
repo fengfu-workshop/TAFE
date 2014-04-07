@@ -18,7 +18,7 @@
     <div class="wrapper">
 		<header class="clear_fix">
 			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
-			<a href="#"><img class="shopping_cart" src="/Images/shopping_cart.png" alt="Shopping Cart" /></a>
+			<a href="#"><img class="shopping_cart" src="/Images/shopping_trolley.png" alt="Shopping Cart" /></a>
 			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
 		</header>
 		<nav class="hnav">
@@ -26,7 +26,7 @@
 			<a href="/Test/About.aspx">About</a>
 			<a href="/Test/ItemsSearch.aspx">Products</a>
 			<a href="/WebPages/ContactUs.aspx">Contact Us</a>
-			<a href="/Test/Logon.aspx">Log on</a>
+			<a href="/Management/Management.aspx">Management</a>
 		</nav>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         

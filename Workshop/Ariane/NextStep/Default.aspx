@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="NextStep Sport" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -34,7 +34,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
         <section>
             <h3>Best buy this week</h3>
@@ -45,7 +45,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
         <section>
             <h3>See what our customer say</h3>
@@ -57,7 +57,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
     </div>
 
@@ -71,7 +71,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
         <section>
             <h3>Best buy this week</h3>
@@ -82,7 +82,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
         <section>
             <h3>See what our customer say</h3>
@@ -94,7 +94,7 @@
 						tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <a href="#">More ...</a>
+            <a href="UnderConstruction.aspx">More ...</a>
         </section>
     </div>
 </asp:Content>

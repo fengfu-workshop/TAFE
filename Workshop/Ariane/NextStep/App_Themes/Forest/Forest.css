@@ -1,0 +1,159 @@
+﻿/*
+                Header  Nav
+    Ocean       #89D    #579        
+    Forest      #8DB    #597
+    Desert      #CC7    #992
+
+ */
+
+* {
+    margin: 0 0 0 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear_fix:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+img {
+   border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	background-color: white;
+	-webkit-box-shadow: 0 0 10px 5px #AAA;
+	box-shadow: 0 0 10px 5px #AAA;
+}
+
+.middle {
+    overflow: hidden;
+}
+
+body {
+	text-shadow: 0 -1px 1px #BBB;
+	background-color: #F1F1F1;
+}
+
+header {
+	height: 80px;
+    box-shadow: inset 0 0 60px 5px #597;
+}
+
+header .logo {
+	height: 60px;	
+	margin: 10px -5px 10px 20px;
+	float: left;
+}
+
+header h1 {
+	line-height: 80px;
+}
+
+header .next {
+	color: #F5861F;
+}
+
+header .step {
+	color: #5979AC;
+}
+
+nav {
+	background-color: #597;
+	color: white;
+    font-size: 90%;   
+    float: left;
+    width: 150px;
+
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+
+}
+
+nav a {
+	display:block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 0 1px 1px #363636;
+    margin: 2px auto;
+
+    -webkit-box-shadow:inset 0 0 20px 1px #DDD;
+    box-shadow:inset 0 0 20px 1px #DDD;
+    -webkit-border-radius:10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+}
+
+nav a:hover {
+    color: #F5861F;
+    -webkit-box-shadow:inset 0 0 8px 2px #EEE;
+    box-shadow:inset 0 0 8px 2px #EEE;
+}
+
+.theme {
+    margin: 10px;
+}
+
+.main {
+    min-height: 300px;
+    /*border: 1px solid black;*/
+
+    width: 800px;
+    float: left;
+    margin-left: 10px;
+}
+
+footer {
+	height: 40px;
+	line-height: 40px;
+	color: #5979AC;
+	padding: 0 20px;
+	text-shadow: 1px 0 2px #FFF;
+	font-size: 0.9em;
+    -webkit-box-shadow: inset 0 0 40px 5px #597;
+    box-shadow: inset 0 0 40px 5px #597;
+}
+
+/*
+    End of Master File CSS
+    Start of Content page CSS
+*/
+
+.shadow_box {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    -webkit-box-shadow: 2px 2px 5px 2px #AAA;
+	box-shadow: 2px 2px 5px 2px #AAA;
+}
+
+.width500 {
+    width: 500px;
+}
+
+.title_box {
+    min-width: 50px;
+}
+
+.title_box h3 {
+    color: white;
+    text-align: center;
+    background-color: #597;
+    width: 100%;
+    padding: 3px 0;
+}
+
