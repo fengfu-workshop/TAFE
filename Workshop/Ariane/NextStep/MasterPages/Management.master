@@ -14,10 +14,13 @@
     <form id="form1" runat="server">
     <div class="wrapper">
         <header>
+            <asp:LoginName ID="LoginName1" runat="server" CssClass="user" FormatString='<a href="/Management/ChangePassword.aspx">Hello {0}</a>'/>
 			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
 			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
+            <h2>Online Shop Management Page</h2>
+   
         </header>
-        <div class="middle clear_fix">
+        <div class="middle_part clear_fix">
 		    <nav class="clear_fix">
                 <div class="theme">
                     Theme:
@@ -27,12 +30,12 @@
                         <asp:ListItem>Desert</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <a href="/">Home</a>
-			    <a href="/UnderConstruction.aspx">Category</a>
-			    <a href="/UnderConstruction.aspx">Items</a>
+                <a href="/">Online Store</a>
+			    <a href="/Management/CategoryManagement.aspx">Category</a>
+			    <a href="/Management/ItemManagement.aspx">Items</a>
 			    <a href="/UnderConstruction.aspx">News</a>
-			    <a href="/UnderConstruction.aspx">Report</a>
-                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+			    <a href="/UnderConstruction.aspx">Promotion</a>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="RedirectToLoginPage" onloggedout="LoginStatus1_LoggedOut" />
 		    </nav>
             <div class="main">
                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        

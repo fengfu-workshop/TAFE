@@ -8,30 +8,17 @@ using System.Web;
 /// </summary>
 public class BasePage : System.Web.UI.Page
 {
-    private void Page_PreRender(object sender, EventArgs e)
-    {
-        if (string.IsNullOrEmpty(this.Title))
-        {
-            throw new Exception("Page title must be specified.");
-        }
-    }
-
     protected void Page_PreInit(object sender, EventArgs e)
     {
-        HttpCookie preferredTheme = Request.Cookies.Get("PreferredTheme");
-        if (preferredTheme != null)
-        {
-            string folder = Server.MapPath("~/App_Themes/" + preferredTheme.Value);
-            if (System.IO.Directory.Exists(folder))
-            {
-                Page.Theme = preferredTheme.Value;
-            }
-        }
+        string themeName = Request.Cookies.Get("Theme") != null ? Request.Cookies.Get("Theme").Value : "";
+
+        if (!string.IsNullOrEmpty(themeName) && Page.Theme != themeName)
+            Page.Theme = themeName;
+
     }
 
 	public BasePage()
 	{
-        this.PreRender += Page_PreRender;
         this.PreInit += Page_PreInit;
 	}
 }
