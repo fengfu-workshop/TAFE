@@ -118,10 +118,9 @@ nav a:hover, header a:hover {
 }
 
 .main {
-    min-height: 300px;
-    width: 800px;
+    min-height: 500px;
+    width: 810px;
     float: left;
-    margin-left: 10px;
 }
 
 footer {
@@ -285,4 +284,72 @@ footer {
     color: #F5861F;
     -webkit-box-shadow:inset 0 0 8px 2px #EEE;
     box-shadow: 0 0 8px 2px #597;
+}
+
+.item_box{
+
+}
+
+.item_box input[type="submit"] {
+    padding: 0 5px;
+    /*background-color: #597;*/
+}
+
+.item_box input[type="submit"]:first-child {
+    margin-left: 10px;
+}
+
+.item_box .sub_header {
+    background: #555;
+    width: 100%;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-size: 0.9em;
+}
+
+.item_list {
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+}
+
+.item_list img {
+    float: right;
+    width: 100px;
+}
+
+.item_list p {
+    margin-top: 5px;
+}
+
+.item_box fieldset {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid #597;
+}
+
+.item_box fieldset input:not([type="file"]) {
+    border: 1px solid #597;
+    padding: 2px;
+}
+
+.item_box legend {
+    padding: 10px;
+    margin-left: 20px;
+    color: #597;
+}
+
+.item_box fieldset label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #597;
+    height: 30px;
+    /*vertical-align: middle;*/
+}
+
+.item_box fieldset textarea {
+    width: 600px;
+    height: 70px;
+    resize: vertical;
 }

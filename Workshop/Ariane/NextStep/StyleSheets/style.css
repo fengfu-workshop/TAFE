@@ -308,8 +308,8 @@ footer {
 
 .item_thumb img {
     width: 160px;
+    height: 160px;
     margin: 10px;
-
 }
 
 .item_left {

@@ -12,7 +12,7 @@
             </EmptyDataTemplate>
             <ItemTemplate>
                 <div class="item_left shadow_box">
-                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoName", "~/Images/Items/{0}") %>' AlternateText="Photo coming soon" />
+                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "~/Images/Items/{0}") %>' AlternateText="Photo coming soon" />
                 </div>
                 <div class="item_right">
                     <h2>
@@ -42,7 +42,7 @@
 
         </asp:ListView>
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [ItemId], [ItemName], [Price], [PhotoName], [Quantity], [Description] FROM [Item] WHERE ([ItemId] = @ItemId)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [ItemId], [ItemName], [Price], [PhotoGuid], [Quantity], [Description] FROM [Item] WHERE ([ItemId] = @ItemId)">
         <SelectParameters>
             <asp:QueryStringParameter Name="ItemId" QueryStringField="Id" Type="Int32" />
         </SelectParameters>
