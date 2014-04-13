@@ -18,13 +18,14 @@
     <div class="wrapper">
 		<header class="clear_fix">
 			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
-			<a href="#"><img class="shopping_cart" src="/Images/shopping_trolley.png" alt="Shopping Cart" /></a>
+			<a href="/WebPages/ShoppingList.aspx"><img class="shopping_cart" src="/Images/shopping_trolley.png" alt="Shopping Cart" /></a>
 			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
+            <a href="/WebPages/ShoppingList.aspx"><asp:Label ID="lblNumProducts" runat="server" Text="0" CssClass="num_of_products"></asp:Label></a>
 		</header>
 		<nav class="hnav">
 			<a href="/">Home</a>
 			<a href="/Test/About.aspx">About</a>
-			<a href="/Test/ItemsSearch.aspx">Products</a>
+			<a href="/WebPages/ItemsSearch.aspx">Products</a>
 			<a href="/WebPages/ContactUs.aspx">Contact Us</a>
 			<a href="/Management/Management.aspx">Management</a>
 		</nav>

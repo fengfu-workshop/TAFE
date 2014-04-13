@@ -27,7 +27,7 @@
                     <asp:DropDownList ID="ddlTheme" runat="server" OnSelectedIndexChanged="ddlTheme_SelectedIndexChanged" Width="130px" AutoPostBack="True">
                         <asp:ListItem>Ocean</asp:ListItem>
                         <asp:ListItem>Forest</asp:ListItem>
-                        <asp:ListItem>Desert</asp:ListItem>
+                        <asp:ListItem>Space</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <a href="/">Online Store</a>

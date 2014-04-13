@@ -1,8 +1,9 @@
 ﻿/*
+
                 Header  Nav
     Ocean       #89D    #579        
     Forest      #8DB    #597
-    Desert      #CC7    #992
+    SPACE       #222    #222
 
  */
 
@@ -44,7 +45,7 @@ body {
 
 header {
 	height: 80px;
-    box-shadow: inset 0 0 60px 5px #579;
+    box-shadow: inset 0 0 10px 1px #579;
 }
 
 header .logo {
@@ -132,6 +133,7 @@ footer {
     Start of Content page CSS
     --------------------------------------------------------------
 */
+
 
 .float {
     float: left;
@@ -276,4 +278,116 @@ footer {
     color: #F5861F;
     -webkit-box-shadow:inset 0 0 8px 2px #EEE;
     box-shadow: 0 0 8px 2px #579;
+}
+
+.item_box{
+
+}
+
+.item_box input[type="submit"] {
+    padding: 0 5px;
+    /*background-color: #579;*/
+}
+
+.item_box input[type="submit"]:first-child {
+    margin-left: 10px;
+}
+
+.item_box .sub_header {
+    background: #579;
+    /*width: 100%;*/
+    height: 40px;
+    color: white;
+    line-height: 22px;
+    font-size: 0.9em;
+    /*padding-left: 10px;*/
+    -webkit-box-shadow: inset 0 0 20px 10px #FFF;
+    box-shadow: inset 0 0 20px 10px #FFF;
+}
+
+.item_box .sub_header * {
+    margin: 8px 0 0 10px;   
+}
+
+/*.item_box .sub_header a {
+    padding: 0 6px;
+}*/
+
+.item_list {
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+}
+
+.item_list img {
+    float: right;
+    width: 100px;
+}
+
+/*img.right_thumb {
+    width:160px;
+    float: right;
+    margin-right: 10px;
+}*/
+
+.item_list p {
+    margin-top: 5px;
+    color: #888;
+    font-size: 90%;
+}
+
+.item_list h4 {
+    color: blue;
+    font-size: 1.2em;
+}
+
+.item_list h5 {
+    display: inline;
+    margin-right: 50px;
+}
+
+.item_box fieldset {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid #579;
+}
+
+.item_box fieldset input:not([type="file"]) {
+    border: 1px solid #579;
+    padding: 2px;
+}
+
+.item_box legend {
+    padding: 10px;
+    margin-left: 20px;
+    color: #579;
+}
+
+.item_box fieldset label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #579;
+    height: 30px;
+}
+
+.item_box fieldset textarea {
+    width: 600px;
+    height: 70px;
+    resize: vertical;
+    border-color: #579;
+}
+
+.list_button {
+    margin-left: 100px;
+}
+
+.pager {
+    background-color: #DDD;
+    padding-left: 10px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.item_box .pager * {
+    margin: 5px auto;
 }
