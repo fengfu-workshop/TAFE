@@ -1,8 +1,0 @@
-﻿Hi,
-
-A user has requested the following information:
-
-Name:			##Name##
-Email:			##Email##
-Contact Number: ##Phone##
-Comment:		##Comment##

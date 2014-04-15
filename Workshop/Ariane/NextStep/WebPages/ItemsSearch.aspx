@@ -46,7 +46,27 @@
                     </asp:UpdatePanel>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
+                    <div class="pager custom_button">
+                        <asp:DataPager ID="DataPager1" runat="server" PageSize="9">
+                            <Fields>
+                                <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" ButtonCssClass="left_rounded" />
+                                <asp:NumericPagerField />
+                                <asp:NextPreviousPagerField ShowLastPageButton="True" ShowPreviousPageButton="False" ButtonCssClass="right_rounded" />
+                            </Fields>
+                        </asp:DataPager>
+                    </div>
+                    <div class="clear_fix">
+                        <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
+                    </div>
+                    <div class="pager custom_button">
+                        <asp:DataPager ID="DataPager2" runat="server" PageSize="9">
+                            <Fields>
+                                <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" ButtonCssClass="left_rounded" />
+                                <asp:NumericPagerField />
+                                <asp:NextPreviousPagerField ShowLastPageButton="True" ShowPreviousPageButton="False" ButtonCssClass="right_rounded" />
+                            </Fields>
+                        </asp:DataPager>
+                    </div>
                 </LayoutTemplate>
 
 
@@ -54,7 +74,7 @@
         </div>
     </div>
     <asp:SqlDataSource ID="CategorySource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName] FROM [Category]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))">
+    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))">
         <SelectParameters>
             <asp:ControlParameter ControlID="ddlCategory" Name="CategoryId" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
             <asp:ControlParameter ControlID="txtProduct" Name="ItemName" PropertyName="Text" Type="String" DefaultValue=" " />

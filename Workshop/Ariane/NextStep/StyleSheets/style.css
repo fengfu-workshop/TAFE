@@ -317,6 +317,19 @@ footer {
     margin-bottom: -9999px;
 }
 
+.pager {
+    margin-left: 10px;
+}
+.pager:not(:first-child) {
+    padding-bottom: 10px;
+}
+
+.pager>span {
+    display: block;
+    margin: 0 auto;
+    width:280px;
+}
+
 .item_thumb {
     float: left;
     /*display: inline-block;*/
@@ -418,22 +431,46 @@ footer {
     color: #888;
 }
 
-
-.shopping_list a[id] {
+.custom_button a {
     color: #5979AC;
     padding: 2px 5px;
+    border: 1px solid #7C9BD0;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.custom_button a.right_rounded {
+    color: #5979AC;
+    padding: 2px 10px 2px 5px;
     border: 1px solid #7C9BD0;
     -webkit-border-radius: 0 15px 15px 0;
     border-radius: 0 15px 15px 0;
 }
 
-.shopping_list .check_out a {
-    padding: 5px 10px;
+.custom_button a.left_rounded  {
+    color: #5979AC;
+    padding: 2px 5px 2px 10px;
+    border: 1px solid #7C9BD0;
+    -webkit-border-radius: 15px 0 0 15px;
+    border-radius: 15px 0 0 15px;
 }
 
-.shopping_list a[id]:hover {
+.custom_button a.no_border {
+    border: none;
+}
+
+.custom_button a:hover {
     color: #55FF55;
     background-color: #7C9BD0;
+}
+
+.custom_button a.no_border:hover {
+    background-color: transparent;
+}
+
+
+.shopping_list .check_out a {
+    padding: 5px 10px;
 }
 
 .shopping_list table {
@@ -501,9 +538,15 @@ footer {
     margin: 15px 0 15px 215px;
 }
 
-.purchased fieldset p {
+.purchased p {
     padding: 10px;
+    width: 600px;
+    margin: 0 auto;
     font-size: medium;
+}
+
+.purchased a {
+    padding: 5px 10px;
 }
 
 .shopping_list .purchased fieldset a {

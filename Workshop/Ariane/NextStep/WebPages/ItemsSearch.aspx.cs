@@ -41,13 +41,13 @@ public partial class Test_ItemsSearch : System.Web.UI.Page
     }
     protected void btnFindProduct_Click(object sender, EventArgs e)
     {
-        if (ddlCategory.SelectedIndex == 0)
-            ItemSource.SelectCommand = "SELECT * FROM [Item] WHERE ([ItemName] LIKE '%' + @ItemName + '%')";
-        else
-            ItemSource.SelectCommand = "SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))";
-        ItemSource.DataBind();
-
+        //if (ddlCategory.SelectedIndex == 0)
+        //    ItemSource.SelectCommand = "SELECT * FROM [Item] WHERE ([ItemName] LIKE '%' + @ItemName + '%')";
+        //else
+        //    ItemSource.SelectCommand = "SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))";
+        //ItemSource.DataBind();
     }
+
     protected void txtProduct_TextChanged(object sender, EventArgs e)
     {
         HttpCookie product = new HttpCookie("Product");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,7 @@ using System.Web.UI.WebControls;
 
 public partial class WebPages_ShoppingList : System.Web.UI.Page
 {
-    //string PrimaryKey;
+    string PrimaryKey;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -23,6 +24,8 @@ public partial class WebPages_ShoppingList : System.Web.UI.Page
                        select product.Value;
         GridView1.DataSource = products;
         GridView1.DataBind();
+        GridView2.DataSource = products;
+        GridView2.DataBind();
     }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
@@ -62,18 +65,32 @@ public partial class WebPages_ShoppingList : System.Web.UI.Page
 
     private void On_Inserted(Object sender, SqlDataSourceStatusEventArgs e)
     {
+        DbCommand command = e.Command;
+
+        lblOrderNo.Text = PrimaryKey = command.Parameters["@NewId"].Value.ToString();
+
+    }
+
+    private void On_Selected(Object sender, SqlDataSourceStatusEventArgs e)
+    {
         //DbCommand command = e.Command;
 
         //PrimaryKey = command.Parameters["OrderId"].Value.ToString();
-
     }
 
     protected bool SaveOrder()
     {
         SqlDataSource source = new SqlDataSource();
         bool success;
+        Parameter param = new Parameter();
+        param.Name = "NewID";
+        param.DbType = DbType.Int32;
+        param.Direction = ParameterDirection.Output;
+        param.DefaultValue = "0"; //if you want to add default value
+
         source.ConnectionString = WebConfigurationManager.ConnectionStrings["NextStepConnectionString"].ConnectionString;
         source.Inserted += On_Inserted;
+        source.Selected += On_Selected;
 
         source.InsertParameters.Add("FirstName", tbFirstName.Text);
         source.InsertParameters.Add("LastName", tbLastName.Text);
@@ -84,11 +101,16 @@ public partial class WebPages_ShoppingList : System.Web.UI.Page
         source.InsertParameters.Add("CreditCardNo", tbCreditCard.Text);
         source.InsertParameters.Add("ExpiryDate", tbExpiry.Text);
         source.InsertParameters.Add("NameOnCard", tbNameOnCard.Text);
+        //source.InsertParameters.Add("@NewId", "0");
+        source.InsertParameters.Add(param);
 
-        source.InsertCommand = "INSERT INTO [Order] ([FirstName], [LastName], [Address], [ContactNumber], [Email], [Payment], [CreditCardNo], [ExpiryDate], [NameOnCard]) VALUES (@FirstName, @LastName, @Address, @ContactNumber, @Email, @Payment, @CreditCardNo, @ExpiryDate, @NameOnCard)";
+        source.InsertCommand = "INSERT INTO [Order] ([FirstName], [LastName], [Address], [ContactNumber], [Email], [Payment], [CreditCardNo], [ExpiryDate], [NameOnCard]) VALUES (@FirstName, @LastName, @Address, @ContactNumber, @Email, @Payment, @CreditCardNo, @ExpiryDate, @NameOnCard)"
+                                + "; SET @NewId = Scope_Identity()";
+        //source.SelectCommand = "SET @NewId = Scope_Identity()";
+
 
         success = (source.Insert() == 1);
-        source.Dispose();
+        //source.Select(DataSourceSelectArguments.Empty);
         return success;
     }
 
