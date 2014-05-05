@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Management.master.cs" Inherits="MasterPages_Management"%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="../Scripts/modernizer.min.js"></script>
+    <script src="../Scripts/jquery-2.1.0.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <header>
+            <asp:LoginName ID="LoginName1" runat="server" CssClass="user" FormatString='<a href="/Management/ChangePassword.aspx">Hello {0}</a>'/>
+			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
+			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
+            <h2>Online Shop Management Page</h2>
+   
+        </header>
+        <div class="middle_part clear_fix">
+		    <nav class="clear_fix">
+                <div class="theme">
+                    Theme:
+                    <asp:DropDownList ID="ddlTheme" runat="server" OnSelectedIndexChanged="ddlTheme_SelectedIndexChanged" Width="130px" AutoPostBack="True">
+                        <asp:ListItem>Ocean</asp:ListItem>
+                        <asp:ListItem>Forest</asp:ListItem>
+                        <asp:ListItem>Space</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <a href="/">Online Store</a>
+			    <a href="/Management/CategoryManagement.aspx">Category</a>
+			    <a href="/Management/ItemManagement.aspx">Items</a>
+			    <a href="/UnderConstruction.aspx">News</a>
+			    <a href="/UnderConstruction.aspx">Promotion</a>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="RedirectToLoginPage" onloggedout="LoginStatus1_LoggedOut" />
+		    </nav>
+            <div class="main">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+        <footer>
+			&copy; NextStep Sport Inc.
+        </footer>    </div>
+    </form>
+</body>
+</html>
