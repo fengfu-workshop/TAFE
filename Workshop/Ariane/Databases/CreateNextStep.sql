@@ -2,38 +2,49 @@
 USE MASTER
 GO
 
-DECLARE @NewDatabase BIT = 1
-IF @NewDatabase = 1
-BEGIN
-	IF EXISTS ( SELECT * FROM master..sysdatabases WHERE name = N'NextStep')
-		DROP DATABASE NextStep;
-	--GO
+--DECLARE @NewDatabase BIT = 1
+--IF @NewDatabase = 1
+--BEGIN
+--	IF EXISTS ( SELECT * FROM master..sysdatabases WHERE name = N'NextStep')
+--		DROP DATABASE NextStep;
+--	--GO
 
-	CREATE DATABASE NextStep;
-	--GO
-END
+--	CREATE DATABASE NextStep;
+--	--GO
+--END
 
-USE NextStep
+--USE NextStep
+----GO
+
+--IF @NewDatabase = 0
+--BEGIN
+--	DROP TABLE	Item;
+--	--GO
+--	DROP TABLE Category;
+--	--GO
+--	DROP TABLE [Order];
+--	--GO
+--	DROP TABLE OrderDetail;
+--	--GO
+--	DROP TABLE CreditCard;
+--	--GO
+--END
 --GO
 
-IF @NewDatabase = 0
-BEGIN
-	DROP TABLE	Item;
-	--GO
-	DROP TABLE Category;
-	--GO
-	DROP TABLE [Order];
-	--GO
-	DROP TABLE OrderDetail;
-	--GO
-	DROP TABLE CreditCard;
-	--GO
-END
+IF EXISTS ( SELECT * FROM master..sysdatabases WHERE name = N'NextStep')
+	DROP DATABASE NextStep;
+GO
+
+CREATE DATABASE NextStep;
+GO
+
+USE NextStep
 GO
 
 CREATE TABLE Category (
 	CategoryId		INT IDENTITY(1,1) NOT NULL,
 	CategoryName	NVARCHAR(100) NOT NULL,
+	Active			BIT DEFAULT 1
 	CONSTRAINT pk_Category PRIMARY KEY (CategoryId)
 )
 GO
@@ -90,18 +101,18 @@ CREATE TABLE OrderDetail (
 GO
 
 
-INSERT INTO Category VALUES ('Foorwear - Men')
-INSERT INTO Category VALUES ('Foorwear - Women')
-INSERT INTO Category VALUES ('Foorwear - Kid')
-INSERT INTO Category VALUES ('Clothing - Women')
-INSERT INTO Category VALUES ('Clothing - Women')
-INSERT INTO Category VALUES ('Clothing - Kid')
-INSERT INTO Category VALUES ('Sports')
-INSERT INTO Category VALUES ('Gym and Fitness')
-INSERT INTO Category VALUES ('Game and Leisure')
-INSERT INTO Category VALUES ('FanGear')
-INSERT INTO Category VALUES ('Gift Cards')
-INSERT INTO Category VALUES ('Others')
+INSERT INTO Category VALUES ('Foorwear - Men', 1)
+INSERT INTO Category VALUES ('Foorwear - Women', 1)
+INSERT INTO Category VALUES ('Foorwear - Kid', 1)
+INSERT INTO Category VALUES ('Clothing - Women', 1)
+INSERT INTO Category VALUES ('Clothing - Women', 1)
+INSERT INTO Category VALUES ('Clothing - Kid', 1)
+INSERT INTO Category VALUES ('Sports', 1)
+INSERT INTO Category VALUES ('Gym and Fitness', 1)
+INSERT INTO Category VALUES ('Game and Leisure', 1)
+INSERT INTO Category VALUES ('FanGear', 1)
+INSERT INTO Category VALUES ('Gift Cards', 1)
+INSERT INTO Category VALUES ('Others', 1)
 
 INSERT INTO Item VALUES ('Asics Gel DS Trainer 19 Men''s Running Shoes', 199.99, '34926301.jpg', '34926301.jpg', 10, 'The Asics Gel DS Trainer 19 Men''s Running Shoes are a stable yet cushioned and lightweight design made for fast-paced training and racing. The engineered mesh upper is super-lightweight and offers an enhanced fit and comfort while the rearfoot and forefoot GEL cushioning inserts minimise shock during impact.', 1, 1)
 INSERT INTO Item VALUES ('Asics Gel DS Trainer 19 Men''s Running Shoes', 199.99, '34926301.jpg', '34926301.jpg', 10, 'The Asics Gel DS Trainer 19 Men''s Running Shoes are a stable yet cushioned and lightweight design made for fast-paced training and racing. The engineered mesh upper is super-lightweight and offers an enhanced fit and comfort while the rearfoot and forefoot GEL cushioning inserts minimise shock during impact.', 2, 1)

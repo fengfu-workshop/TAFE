@@ -47,7 +47,7 @@
                     <br />
                     <label>Category:</label>
                     <%--<asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />--%>
-                    <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" AutoPostBack="True" SelectedValue='<%# Bind("CategoryId") %>'></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" SelectedValue='<%# Bind("CategoryId") %>'></asp:DropDownList>
                     <div class="list_button">
                         <asp:LinkButton ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -84,7 +84,7 @@
                     <br />
                     <label>Category:</label>
                     <%--<asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />--%>
-                    <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" AutoPostBack="True" SelectedValue='<%# Bind("CategoryId") %>'></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" SelectedValue='<%# Bind("CategoryId") %>' OnDataBound="ddlCategoryEdit_DataBound"></asp:DropDownList>
                     <div class="list_button">
                         <asp:LinkButton ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                         <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
@@ -110,7 +110,7 @@
                         <h5><%# Eval("Quantity") %></h5>
                         <br /><br />
                         <asp:LinkButton ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                        <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
+                        <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete this product?');" />
                         <br />
                     </div>
                     <p runat="server"><%# Eval("Description") %></p>

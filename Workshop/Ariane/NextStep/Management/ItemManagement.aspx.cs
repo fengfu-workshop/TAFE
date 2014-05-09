@@ -11,10 +11,10 @@ public partial class Management_ItemManagement : BasePage
     protected void Page_Load(object sender, EventArgs e)
     {
         //if (Session["UserName"] == null) Response.Redirect("~/Management/Login.aspx");
-        if (!Page.IsPostBack)
-            ListView1.InsertItemPosition = InsertItemPosition.None;
+
         if (!Page.IsPostBack)
         {
+            ListView1.InsertItemPosition = InsertItemPosition.None;
             string product = Request.Cookies.Get("Product") != null ? Request.Cookies.Get("Product").Value : "";
             if (!string.IsNullOrEmpty(product))
             {
@@ -142,6 +142,18 @@ public partial class Management_ItemManagement : BasePage
         }
         btnFindProduct_Click(sender, e);
     }
+
+    protected void ddlCategoryEdit_DataBound(object sender, EventArgs e)
+    {
+        string category = Request.Cookies.Get("Category") != null ? Request.Cookies.Get("Category").Value : "";
+        if (!string.IsNullOrEmpty(category))
+        {
+            DropDownList ddl = (DropDownList)sender;
+            ListItem item = ddl.Items.FindByValue(category);
+            if (item != null) item.Selected = true;
+        }
+    }
+
 
     protected void txtProduct_TextChanged(object sender, EventArgs e)
     {

@@ -26,6 +26,7 @@
                     Price:
                     <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
                     <br />
+                    <br />
                     In Stock:
                     <asp:Label ID="QuantityLabel" runat="server" Text='<%# Eval("Quantity") %>' />
                     <br />
@@ -38,7 +39,8 @@
                         <asp:TextBox ID="txtQuantity" runat="server" Text="1"></asp:TextBox>
                         <br />
                         <br />
-                        <a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>
+                        <%--<a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>--%>
+                        <asp:ImageButton ID="ImageButton1" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" class="cart_button"/>
                     </div>
 
                 </div>

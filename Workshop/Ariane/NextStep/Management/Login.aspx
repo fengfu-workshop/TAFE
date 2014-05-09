@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="login title_box width300 shadow_box centre_box">
         <h3>Log in to NextStep</h3>
-        <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/Management/Management.aspx" OnLoggedIn="Login1_LoggedIn"></asp:Login>
+        <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/Management/Management.aspx" OnLoggedIn="Login1_LoggedIn" RenderOuterTable="False"></asp:Login>
     </div>
 </asp:Content>
 

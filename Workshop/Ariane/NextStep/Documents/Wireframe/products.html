@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEXTSTEP Products</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="row show_border">
+        <a class="col-md-1" href="index.html"><img class="logo" src="Images/logo.png" alt="logo" /></a>
+        <div class="col-md-10">
+          <h1>NEXTSTEP</h1>
+        </div>
+        <a class="col-md-1" href="#"><img class="shopping_cart" src="Images/shopping_trolley.png" alt="Shopping Cart" /></a>
+      </header>
+      <nav class="row show_border">
+        <ul class="col-md-12 nav nav-pills">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="management.html">Management</a></li>
+        </ul>
+      </nav>
+
+
+      <div class="row row_gap">
+        <div class="col-md-3">
+
+          <form role="form">
+            <div class="form-group">
+              <label for="Product">Category:</label>
+              <select class="form-control">
+                <option value="0">All Category</option>
+                <option selected="selected" value="1">Foorwear - Men</option>
+                <option value="2">Foorwear - Women</option>
+                <option value="3">Foorwear - Kid</option>
+                <option value="4">Clothing - Women</option>
+                <option value="5">Clothing - Women</option>
+                <option value="6">Clothing - Kid</option>
+                <option value="7">Sports</option>
+                <option value="8">Gym and Fitness</option>
+                <option value="9">Game and Leisure</option>
+                <option value="10">FanGear</option>
+                <option value="11">Gift Cards</option>
+                <option value="12">Others</option>
+              </select>
+            </div>
+         
+            <div class="form-group">
+              <label for="Product">Product:</label>
+              <input type="text" class="form-control" id="Product">
+            </div>
+
+            <button type="submit" class="btn btn-default full_width">Find Products</button>
+          </form>
+
+        </div>
+        <div class="col-md-9 show_border">
+
+          <div class="row row_gap">
+            <p class="col-sm-offset-1 col-sm-6">
+              <button type="button" class="btn btn-default btn-sm">First</button>
+              <button type="button" class="btn btn-default btn-sm">Previous</button>
+              <button type="button" class="btn btn-default btn-sm">1</button>
+              <button type="button" class="btn btn-default btn-sm">2</button>          
+              <button type="button" class="btn btn-default btn-sm">...</button>          
+              <button type="button" class="btn btn-default btn-sm">Next</button>
+              <button type="button" class="btn btn-default btn-sm">Last</button>
+            </p>
+          </div>
+
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div>     
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <a href="product_details.html" class="thumbnail">
+              <img data-src="holder.js/100%x180/text:Product" alt="...">
+            </a>
+          </div> 
+
+          <div class="row">
+            <p class="col-sm-offset-1 col-sm-6">
+              <button type="button" class="btn btn-default btn-sm">First</button>
+              <button type="button" class="btn btn-default btn-sm">Previous</button>
+              <button type="button" class="btn btn-default btn-sm">1</button>
+              <button type="button" class="btn btn-default btn-sm">2</button>          
+              <button type="button" class="btn btn-default btn-sm">...</button>          
+              <button type="button" class="btn btn-default btn-sm">Next</button>
+              <button type="button" class="btn btn-default btn-sm">Last</button>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="row row_gap show_border">
+        &copy; NextStep Sport Inc.
+      </footer>  
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+  </body>
+</html>
