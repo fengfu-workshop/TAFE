@@ -8,7 +8,7 @@
         <ContentTemplate>--%>
     <div class="item_box title_box">
         <div class="sub_header">
-            <asp:LinkButton ID="btnInsert" runat="server" Text="Insert Item" OnClick="btnInsert_Click" />
+            <asp:LinkButton ID="btnInsert" runat="server" Text="Insert Item" OnClick="btnInsert_Click" CausesValidation="False" />
             Category:
                     <asp:DropDownList ID="ddlCategory" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="20px" Width="139px" OnDataBound="ddlCategory_DataBound" OnSelectedIndexChanged="ddlCategory_SelectedIndexChanged"></asp:DropDownList>
             Product Name:<asp:TextBox ID="txtProduct" runat="server" Width="190px" Height="22px" OnTextChanged="txtProduct_TextChanged"></asp:TextBox>
@@ -28,9 +28,12 @@
                     <br />
                     <label>Item Name:</label>
                     <asp:TextBox ID="ItemNameTextBox" runat="server" Text='<%# Bind("ItemName") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ItemNameTextBox" ErrorMessage="Please enter the item name" CssClass="error">*</asp:RequiredFieldValidator>
                     <br />
                     <label>Price:</label>
                     <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PriceTextBox" ErrorMessage="Please enter the product price" CssClass="error">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator2" runat="server"  ControlToValidate="PriceTextBox" ErrorMessage="Price must be a positive number!" Type="Double" MinimumValue="0" MaximumValue="999999" CssClass="error">*</asp:RangeValidator>
                     <br />
                     <label>Photo:</label>
                     <asp:TextBox ID="PhotoNameTextBox" runat="server" Text='<%# Bind("PhotoName") %>' Visible="False" />
@@ -41,6 +44,8 @@
 
                     <label>Quantity:</label>
                     <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="QuantityTextBox" ErrorMessage="Please enter the quantity" CssClass="error">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server"  ControlToValidate="QuantityTextBox" ErrorMessage="Quantity must be a positive integer!" Type="Integer" MinimumValue="0" MaximumValue="99999" CssClass="error">*</asp:RangeValidator>
                     <br />
                     <label>Description:</label>
                     <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' TextMode="MultiLine" />
@@ -48,9 +53,10 @@
                     <label>Category:</label>
                     <%--<asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />--%>
                     <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" SelectedValue='<%# Bind("CategoryId") %>'></asp:DropDownList>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowModelStateErrors="False" ShowSummary="False" CssClass="error" />
                     <div class="list_button">
                         <asp:LinkButton ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                        <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                        <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" CausesValidation="False" />
                     </div>
                     <br />
                 </fieldset>
@@ -65,9 +71,12 @@
 
                     <label>Item Name:</label>
                     <asp:TextBox ID="ItemNameTextBox" runat="server" Text='<%# Bind("ItemName") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ItemNameTextBox" ErrorMessage="Please enter the item name" CssClass="error">*</asp:RequiredFieldValidator>
                     <br />
                     <label>Price:</label>
                     <asp:TextBox ID="PriceTextBox" runat="server" Text='<%# Bind("Price") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PriceTextBox" ErrorMessage="Please enter the product price" CssClass="error">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator2" runat="server"  ControlToValidate="PriceTextBox" ErrorMessage="Price must be a positive number!" Type="Double" MinimumValue="0" MaximumValue="999999" CssClass="error">*</asp:RangeValidator>
                     <br />
                     <label>Photo:</label>
                     <asp:TextBox ID="PhotoNameTextBox" runat="server" Text='<%# Bind("PhotoName") %>' Visible="False" />
@@ -78,6 +87,8 @@
 
                     <label>Quantity:</label>
                     <asp:TextBox ID="QuantityTextBox" runat="server" Text='<%# Bind("Quantity") %>' />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="QuantityTextBox" ErrorMessage="Please enter the quantity" CssClass="error">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server"  ControlToValidate="QuantityTextBox" ErrorMessage="Quantity must be a positive integer!" Type="Integer" MinimumValue="0" MaximumValue="99999" CssClass="error">*</asp:RangeValidator>
                     <br />
                     <label>Description:</label>
                     <asp:TextBox ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' TextMode="MultiLine" />
@@ -85,9 +96,10 @@
                     <label>Category:</label>
                     <%--<asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />--%>
                     <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" SelectedValue='<%# Bind("CategoryId") %>' OnDataBound="ddlCategoryEdit_DataBound"></asp:DropDownList>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowModelStateErrors="False" ShowSummary="False" CssClass="error" />
                     <div class="list_button">
                         <asp:LinkButton ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                        <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
+                        <asp:LinkButton ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" CausesValidation="False" />
                     </div>
                     <br />
                 </fieldset>

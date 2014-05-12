@@ -143,8 +143,8 @@
                 </Columns>
             </asp:GridView>
             <p>
-                Thank you for purchasing at NextStep. Your Order No is
-                <asp:Label ID="lblOrderNo" runat="server" Text="NoderNo"></asp:Label>
+                Thank you for purchasing at NextStep. Your Order No. is
+                [<asp:Label ID="lblOrderNo" runat="server" Text="NoderNo"></asp:Label>]
             </p>
             <p>Your purchased products will be delived in 2 days</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac fermentum nunc. In id lacinia nibh. In vehicula dictum bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce aliquet nisi venenatis egestas pulvinar. Nullam lectus nulla, dictum vel neque vel, dictum viverra felis. Integer ac felis vitae massa pharetra mattis. Duis iaculis hendrerit leo, eu porta velit sagittis tincidunt. Suspendisse imperdiet id diam in pharetra. Quisque eros tortor, porttitor in volutpat sed, volutpat ac orci. Curabitur in purus posuere justo imperdiet suscipit eu ac elit. Aliquam erat volutpat. Suspendisse at placerat nisi, eget varius sem. Aliquam erat volutpat. Curabitur bibendum nibh vitae tellus imperdiet vestibulum.</p>

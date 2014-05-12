@@ -10,7 +10,15 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName], [Active]) VALUES (@CategoryName, @Active)" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] WHERE ([Active] = @Active)" UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName, [Active] = @Active WHERE [CategoryId] = @CategoryId">
+        <br />
+        <br />
+        <asp:Label ID="lblFormat" runat="server" Text="Label"></asp:Label>
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
+    
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName], [Active]) VALUES (@CategoryName, @Active)" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] WHERE ([Active] = @Active)" UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName, [Active] = @Active WHERE [CategoryId] = @CategoryId">
             <DeleteParameters>
                 <asp:Parameter Name="CategoryId" Type="Int32" />
             </DeleteParameters>

@@ -242,6 +242,10 @@ footer {
     width: 500px;
 }
 
+.h500 {
+    height: 500px;
+}
+
 .shadow_box {
     padding: 0 20px;
     background-color: white;
@@ -397,12 +401,9 @@ footer {
 
 .shopping_cart .cart_button {
     /*vertical-align: middle;*/
-    height: 50px;
-}
-
-.shopping_cart .cart_button {
     display: inline-block;
-    padding: 5px;
+    padding: 5px;    
+    height: 50px;
 }
 
 .shopping_cart .cart_button:hover {

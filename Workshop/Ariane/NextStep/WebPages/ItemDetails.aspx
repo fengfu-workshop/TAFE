@@ -40,7 +40,7 @@
                         <br />
                         <br />
                         <%--<a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>--%>
-                        <asp:ImageButton ID="ImageButton1" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" class="cart_button"/>
+                        <asp:ImageButton ID="ImageButton1" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" CssClass="cart_button"/>
                     </div>
 
                 </div>

@@ -67,7 +67,9 @@ public partial class WebPages_ShoppingList : System.Web.UI.Page
     {
         DbCommand command = e.Command;
 
-        lblOrderNo.Text = PrimaryKey = command.Parameters["@NewId"].Value.ToString();
+        PrimaryKey = command.Parameters["@NewId"].Value.ToString();
+
+        lblOrderNo.Text = "ORD" + Int32.Parse(PrimaryKey).ToString("D6");
 
     }
 

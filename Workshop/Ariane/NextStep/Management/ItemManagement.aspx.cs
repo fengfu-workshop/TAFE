@@ -37,7 +37,6 @@ public partial class Management_ItemManagement : BasePage
         ListView1.InsertItemPosition = (ListView1.InsertItemPosition == InsertItemPosition.FirstItem) ? InsertItemPosition.None : InsertItemPosition.FirstItem;
     }
 
-   
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
     {
         //lblDebug.Text = "ItemCommand "; 
@@ -50,10 +49,11 @@ public partial class Management_ItemManagement : BasePage
 
                 if (fileUpload.HasFile)
                 {
+                    string oldGuidString;
+
                     string filename = Path.GetFileName(fileUpload.FileName);
                     TextBox txtPhoto = ListView1.EditItem.FindControl("PhotoNameTextBox") as TextBox;
-                    string guidString = Guid.NewGuid().ToString("N");
-                    string oldGuidString;
+                    string guidString = Guid.NewGuid().ToString("N");        
 
                     fileUpload.SaveAs(Server.MapPath("~/Images/Items/") + guidString);
                     txtPhoto.Text = filename;
@@ -68,7 +68,7 @@ public partial class Management_ItemManagement : BasePage
                     height = 160.0 * img1.Height / denominator;
 
                     System.Drawing.Image bmp1 = img1.GetThumbnailImage((int)width, (int)height, null, IntPtr.Zero);
-                    bmp1.Save(Server.MapPath("~/Images/Thumbs/") + guidString);
+                    bmp1.Save(Server.MapPath("~/Images/Thumbs/") + guidString, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                     File.Delete(Server.MapPath("~/Images/Items/") + oldGuidString);
                     File.Delete(Server.MapPath("~/Images/Thumbs/") + oldGuidString);
@@ -93,6 +93,7 @@ public partial class Management_ItemManagement : BasePage
 
                 if (fileUpload.HasFile)
                 {
+
                     string filename = Path.GetFileName(fileUpload.FileName);
                     TextBox txtPhoto = ListView1.InsertItem.FindControl("PhotoNameTextBox") as TextBox;
                     string guidString = Guid.NewGuid().ToString("N");
@@ -109,7 +110,7 @@ public partial class Management_ItemManagement : BasePage
                     height = 160.0 * img1.Height / denominator;
 
                     System.Drawing.Image bmp1 = img1.GetThumbnailImage((int)width, (int)height, null, IntPtr.Zero);
-                    bmp1.Save(Server.MapPath("~/Images/Thumbs/") + guidString);
+                    bmp1.Save(Server.MapPath("~/Images/Thumbs/") + guidString, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                 }
 

@@ -9,11 +9,11 @@ public partial class Test_ItemDetails : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
     {
+
         if (e.CommandName == "AddToCart")
         {
             //ShoppingCart Cart = GlobalVar.Cart;
@@ -38,7 +38,7 @@ public partial class Test_ItemDetails : System.Web.UI.Page
 
             Cart.AddProduct(prd, Int32.Parse(txtValue.Text));
 
-            Response.Redirect(Request.RawUrl); // Force refresh page inside Update Panel
+            //Response.Redirect(Request.RawUrl); // Force refresh page inside Update Panel
         }
     }
 
