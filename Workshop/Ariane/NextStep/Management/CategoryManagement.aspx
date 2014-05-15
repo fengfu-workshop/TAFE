@@ -15,7 +15,7 @@
                         <Columns>
                             <asp:TemplateField ShowHeader="False">
                                 <EditItemTemplate>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Update" Text="Update"></asp:LinkButton>
                                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
                                 </EditItemTemplate>
                                 <ItemTemplate>
@@ -25,6 +25,7 @@
                             </asp:TemplateField>
                             <asp:BoundField DataField="CategoryId" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="CategoryId" />
                             <asp:BoundField DataField="CategoryName" HeaderText="Name" SortExpression="CategoryName" />
+                            <asp:CheckBoxField DataField="Active" HeaderText="Active" SortExpression="Active" />
                         </Columns>
                         <PagerStyle CssClass="pgr"></PagerStyle>
                     </asp:GridView>
@@ -48,16 +49,20 @@
                 </Fields>
             </asp:DetailsView>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName] FROM [Category] ORDER BY [CategoryId] DESC" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName]) VALUES (@CategoryName)" UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName WHERE [CategoryId] = @CategoryId">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] ORDER BY [CategoryId] DESC" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName]) VALUES (@CategoryName)" UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName, [Active] = @Active WHERE [CategoryId] = @CategoryId">
             <DeleteParameters>
                 <asp:Parameter Name="CategoryId" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="CategoryName" Type="String" />
             </InsertParameters>
+            <SelectParameters>
+                <asp:Parameter DefaultValue="true" Name="Active" Type="Boolean" />
+            </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="CategoryName" Type="String" />
                 <asp:Parameter Name="CategoryId" Type="Int32" />
+                <asp:Parameter Name="Active" Type="Boolean" />
             </UpdateParameters>
         </asp:SqlDataSource>
     </div>

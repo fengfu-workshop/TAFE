@@ -38,7 +38,7 @@ public partial class Test_ItemDetails : System.Web.UI.Page
 
             Cart.AddProduct(prd, Int32.Parse(txtValue.Text));
 
-            //Response.Redirect(Request.RawUrl); // Force refresh page inside Update Panel
+            Response.Redirect(Request.RawUrl); // Avoid activated again by click refresh button & Force refresh page inside Update Panel
         }
     }
 

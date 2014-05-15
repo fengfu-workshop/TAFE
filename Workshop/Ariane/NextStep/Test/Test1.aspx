@@ -10,6 +10,8 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:CheckBox ID="CheckBox1" runat="server" Text="Active" />
+    
         <br />
         <br />
         <asp:Label ID="lblFormat" runat="server" Text="Label"></asp:Label>

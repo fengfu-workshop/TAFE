@@ -352,7 +352,7 @@ footer {
 
 .item_list1 h5 {
     display: inline;
-    margin-right: 50px;
+    margin-right: 30px;
 }*/
 
 .item_list {
@@ -378,7 +378,7 @@ footer {
 
 .item_list h5 {
     display: inline;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .item_box fieldset {
@@ -393,7 +393,7 @@ footer {
     margin-right: 10px;
 }
 
-.item_box fieldset input:not([type="file"]) {
+.item_box fieldset input:not([type="file"]):not([type="checkbox"]) {
     border: 1px solid #222;
     padding: 3px;
     width: 400px;

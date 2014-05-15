@@ -53,6 +53,9 @@
                     <label>Category:</label>
                     <%--<asp:TextBox ID="CategoryIdTextBox" runat="server" Text='<%# Bind("CategoryId") %>' />--%>
                     <asp:DropDownList ID="ddlCategoryEdit" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="22px" Width="190px" SelectedValue='<%# Bind("CategoryId") %>'></asp:DropDownList>
+                    <br />
+                    <label>Active:</label>
+                    <asp:CheckBox ID="CheckBox1" runat="server" Checked='<%# Bind("Active") %>' />
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowModelStateErrors="False" ShowSummary="False" CssClass="error" />
                     <div class="list_button">
                         <asp:LinkButton ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
@@ -120,6 +123,10 @@
 
                         Quantity:
                         <h5><%# Eval("Quantity") %></h5>
+
+                        Active:
+                        <h5><%# Eval("Active") %></h5>
+
                         <br /><br />
                         <asp:LinkButton ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
                         <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete this product?');" />
@@ -133,7 +140,7 @@
             </ItemTemplate>
             <LayoutTemplate>
                 <div class="pager">
-                    <asp:DataPager ID="DataPager1" runat="server" PageSize="3">
+                    <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
                         <Fields>
                             <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" />
                             <asp:NumericPagerField />
@@ -146,7 +153,7 @@
                     <span runat="server" id="itemPlaceholder" />
                 </div>
                 <div class="pager">
-                    <asp:DataPager ID="DataPager2" runat="server" PageSize="3">
+                    <asp:DataPager ID="DataPager2" runat="server" PageSize="6">
                         <Fields>
                             <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" />
                             <asp:NumericPagerField />
@@ -160,7 +167,7 @@
     </div>
     <%--        </ContentTemplate>
     </asp:UpdatePanel>--%>
-    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId WHERE [ItemId] = @ItemId">
+    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId], [Active]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId, @Active)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId, [Active] = @Active WHERE [ItemId] = @ItemId">
         <DeleteParameters>
             <asp:Parameter Name="ItemId" Type="Int32" />
         </DeleteParameters>
@@ -186,6 +193,7 @@
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="CategoryId" Type="Int32" />
             <asp:Parameter Name="ItemId" Type="Int32" />
+            <asp:Parameter Name="Active" Type="Boolean" />
         </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="CategorySource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>

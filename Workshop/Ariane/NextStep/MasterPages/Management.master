@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
     <div class="wrapper">
         <header>
-            <asp:LoginName ID="LoginName1" runat="server" CssClass="user" FormatString='<a href="/Management/ChangePassword.aspx">Hello {0}</a>'/>
+            <asp:LoginName ID="LoginName1" runat="server" CssClass="user" FormatString='<a href="/Management/ChangePassword.aspx">[Hello {0}]</a>'/>
 			<a href="/"><img class="logo" src="/Images/logo.png" alt="logo" /></a>
 			<h1><span class="next">NEXT</span><span class="step">STEP</span></h1>
             <h2>Online Shop Management Page</h2>
