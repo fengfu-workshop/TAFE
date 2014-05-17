@@ -12,6 +12,7 @@
     <script src="/Scripts/modernizer.min.js"></script>
     <script src="/Scripts/jquery-2.1.0.min.js"></script>
     <script src="../Scripts/jquery.zoom.min.js"></script>
+    <script src="../Scripts/jquery.colorbox-min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">

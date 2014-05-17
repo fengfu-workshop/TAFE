@@ -242,8 +242,8 @@ footer {
     width: 500px;
 }
 
-.h500 {
-    height: 500px;
+.h300 {
+    height: 300px;
 }
 
 .shadow_box {
@@ -335,6 +335,8 @@ footer {
 }
 
 .item_thumb {
+    position: relative;
+    overflow: hidden;
     float: left;
     /*display: inline-block;*/
     width: 180px;
@@ -349,6 +351,21 @@ footer {
     width: 160px;
     height: 160px;
     margin: 10px;
+}
+
+.item_thumb .description {
+    overflow: hidden;
+    height: 50px;
+}
+
+.item_thumb .preview {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 1px solid #EEE;
 }
 
 .item_thumb .price input[type="image"] {
