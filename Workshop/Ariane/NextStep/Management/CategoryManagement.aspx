@@ -49,7 +49,8 @@
                 </Fields>
             </asp:DetailsView>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] ORDER BY [CategoryId] DESC" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName]) VALUES (@CategoryName)" UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName, [Active] = @Active WHERE [CategoryId] = @CategoryId">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] ORDER BY [CategoryId] DESC" DeleteCommand="DELETE FROM [Category] WHERE [CategoryId] = @CategoryId" InsertCommand="INSERT INTO [Category] ([CategoryName]) VALUES (@CategoryName)" 
+            UpdateCommand="UPDATE [Category] SET [CategoryName] = @CategoryName, [Active] = @Active WHERE [CategoryId] = @CategoryId; UPDATE [Item] SET [Active] = @Active WHERE [CategoryId] = @CategoryId">
             <DeleteParameters>
                 <asp:Parameter Name="CategoryId" Type="Int32" />
             </DeleteParameters>

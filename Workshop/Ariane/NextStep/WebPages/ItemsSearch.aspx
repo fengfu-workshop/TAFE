@@ -90,6 +90,12 @@
     <script type="text/javascript">
         $(document).ready(function () {
             //$('.preview').click(function (e) {
+            $('#Product_Holder').on('mouseenter', '.preview', function (e) {
+                $(this).addClass('shadow_box').animate({ width: '50px', height: '50px' });
+            });
+            $('#Product_Holder').on('mouseleave', '.preview', function (e) {
+                $(this).removeClass('shadow_box').animate({ width: '40px', height: '40px' });
+            });
             $('#Product_Holder').on('click', '.preview', function (e) {
                 e.preventDefault();
                 var maxWidth = $(window).height() - 100;

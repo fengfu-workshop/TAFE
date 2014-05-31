@@ -17,7 +17,7 @@
 
         </div>
 
-        <asp:ListView ID="ListView1" runat="server" OnItemCommand="ListView1_ItemCommand" DataKeyNames="ItemId" DataSourceID="ItemSource" InsertItemPosition="LastItem">
+        <asp:ListView ID="ListView1" runat="server" OnItemCommand="ListView1_ItemCommand" DataKeyNames="ItemId" DataSourceID="ItemSource" InsertItemPosition="LastItem" OnItemDeleted="ListView1_ItemDeleted" OnItemDeleting="ListView1_ItemDeleting">
 
             <EditItemTemplate>
                 <fieldset>
@@ -109,11 +109,12 @@
 
             </InsertItemTemplate>
             <ItemTemplate>
-                <%--                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+<%--                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>--%>
                 <div class="item_list item_list1 item_list2 clear_fix">
 
-                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "~/Images/Thumbs/{0}") %>' AlternateText="Photo coming soon" />
+                    <asp:Image ID="imgPhoto" runat="server" ImageUrl='<%# Eval("PhotoGuid", "~/Images/Thumbs/{0}") %>' AlternateText="Photo coming soon" />
+                    <%--<asp:TextBox ID="PhotoGuidTextBox" runat="server" Text='<%# Bind("PhotoGuid") %>' Visible="False" />--%>
 
                     <div class="item_list_data">
                         <h4><%# Eval("ItemName") %></h4>
@@ -128,19 +129,19 @@
                         <h5><%# Eval("Active") %></h5>
 
                         <br /><br />
-                        <asp:LinkButton ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                        <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete this product?');" />
+                        <asp:LinkButton ID="EditButton" runat="server" CommandName="Edit" Text="Edit" CausesValidation="False" />
+                        <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Are you sure you want to delete this product?');" CausesValidation="False" />
                         <br />
                     </div>
                     <p runat="server"><%# Eval("Description") %></p>
 
                 </div>
-                <%--                    </ContentTemplate>
+<%--                                    </ContentTemplate>
                 </asp:UpdatePanel>--%>
             </ItemTemplate>
             <LayoutTemplate>
                 <div class="pager">
-                    <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
+                    <asp:DataPager ID="DataPager1" runat="server" PageSize="5">
                         <Fields>
                             <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" />
                             <asp:NumericPagerField />
@@ -153,7 +154,7 @@
                     <span runat="server" id="itemPlaceholder" />
                 </div>
                 <div class="pager">
-                    <asp:DataPager ID="DataPager2" runat="server" PageSize="6">
+                    <asp:DataPager ID="DataPager2" runat="server" PageSize="5">
                         <Fields>
                             <asp:NextPreviousPagerField ShowFirstPageButton="True" ShowNextPageButton="False" />
                             <asp:NumericPagerField />
@@ -167,7 +168,7 @@
     </div>
     <%--        </ContentTemplate>
     </asp:UpdatePanel>--%>
-    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId], [Active]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId, @Active)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId, [Active] = @Active WHERE [ItemId] = @ItemId">
+    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId], [Active]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId, 1)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId, [Active] = @Active WHERE [ItemId] = @ItemId">
         <DeleteParameters>
             <asp:Parameter Name="ItemId" Type="Int32" />
         </DeleteParameters>
@@ -179,6 +180,7 @@
             <asp:Parameter Name="Quantity" Type="Int32" />
             <asp:Parameter Name="Description" Type="String" />
             <asp:Parameter Name="CategoryId" Type="Int32" />
+            <asp:Parameter Name="Active" Type="Boolean" />
         </InsertParameters>
         <SelectParameters>
             <asp:ControlParameter ControlID="ddlCategory" Name="CategoryId" PropertyName="SelectedValue" Type="Int32" />

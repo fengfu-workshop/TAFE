@@ -5,12 +5,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="shopping_list custom_button">
         <asp:Panel ID="pnlList" runat="server">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowFooter="True" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_DataBound">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowFooter="True" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_DataBound" CellSpacing="-1" GridLines="None">
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
                             <a class="no_border" href="/WebPages/ItemDetails.aspx?Id=<%# Eval("ItemId") %>">
-                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "/Images/Thumbs/{0}") %>' />
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "/Images/Thumbs/{0}") %>' AlternateText="Photo comming soon" />
                             </a>
                         </ItemTemplate>
                     </asp:TemplateField>
@@ -113,7 +113,7 @@
                     <asp:TemplateField>
                         <ItemTemplate>
                             <a class="no_border" href="/WebPages/ItemDetails.aspx?Id=<%# Eval("ItemId") %>">
-                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "/Images/Thumbs/{0}") %>' />
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "/Images/Thumbs/{0}") %>' AlternateText="Photo comming soon" />
                             </a>
                         </ItemTemplate>
                     </asp:TemplateField>

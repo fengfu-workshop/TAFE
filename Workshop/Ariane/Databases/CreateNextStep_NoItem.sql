@@ -2,35 +2,6 @@
 USE MASTER
 GO
 
---DECLARE @NewDatabase BIT = 1
---IF @NewDatabase = 1
---BEGIN
---	IF EXISTS ( SELECT * FROM master..sysdatabases WHERE name = N'NextStep')
---		DROP DATABASE NextStep;
---	--GO
-
---	CREATE DATABASE NextStep;
---	--GO
---END
-
---USE NextStep
-----GO
-
---IF @NewDatabase = 0
---BEGIN
---	DROP TABLE	Item;
---	--GO
---	DROP TABLE Category;
---	--GO
---	DROP TABLE [Order];
---	--GO
---	DROP TABLE OrderDetail;
---	--GO
---	DROP TABLE CreditCard;
---	--GO
---END
---GO
-
 IF EXISTS ( SELECT * FROM master..sysdatabases WHERE name = N'NextStep')
 	DROP DATABASE NextStep;
 GO
@@ -100,10 +71,10 @@ CREATE TABLE OrderDetail (
 )
 GO
 
-INSERT INTO Category VALUES ('Foorwear - Men', 1)
-INSERT INTO Category VALUES ('Foorwear - Women', 1)
-INSERT INTO Category VALUES ('Foorwear - Kid', 1)
-INSERT INTO Category VALUES ('Clothing - Women', 1)
+INSERT INTO Category VALUES ('Footwear - Men', 1)
+INSERT INTO Category VALUES ('Footwear - Women', 1)
+INSERT INTO Category VALUES ('Footwear - Kid', 1)
+INSERT INTO Category VALUES ('Clothing - Men', 1)
 INSERT INTO Category VALUES ('Clothing - Women', 1)
 INSERT INTO Category VALUES ('Clothing - Kid', 1)
 INSERT INTO Category VALUES ('Sports', 1)
@@ -112,6 +83,7 @@ INSERT INTO Category VALUES ('Game and Leisure', 1)
 INSERT INTO Category VALUES ('FanGear', 1)
 INSERT INTO Category VALUES ('Gift Cards', 1)
 INSERT INTO Category VALUES ('Others', 1)
+
 
 INSERT INTO CreditCard VALUES ('1111-1111-1111-1111', '1 DEC 2021', 'Name1')
 INSERT INTO CreditCard VALUES ('2222-2222-2222-2222', '1 DEC 2022', 'Name2')

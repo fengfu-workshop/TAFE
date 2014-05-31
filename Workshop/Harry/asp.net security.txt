@@ -1,0 +1,4 @@
+<customErrors mode=on>
+session cookieless
+trace enable=on
+validRequest

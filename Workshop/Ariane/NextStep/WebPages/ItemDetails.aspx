@@ -37,6 +37,7 @@
                     <div class="shopping_cart">
                         Quantity:
                         <asp:TextBox ID="txtQuantity" runat="server" Text="1"></asp:TextBox>
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please enter a valid quantity (1-99)" ControlToValidate="txtQuantity" CssClass="error" Type="Integer" MaximumValue="99" MinimumValue="1"></asp:RangeValidator>
                         <br />
                         <br />
                         <%--<a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>--%>

@@ -101,10 +101,10 @@ CREATE TABLE OrderDetail (
 GO
 
 
-INSERT INTO Category VALUES ('Foorwear - Men', 1)
-INSERT INTO Category VALUES ('Foorwear - Women', 1)
-INSERT INTO Category VALUES ('Foorwear - Kid', 1)
-INSERT INTO Category VALUES ('Clothing - Women', 1)
+INSERT INTO Category VALUES ('Footwear - Men', 1)
+INSERT INTO Category VALUES ('Footwear - Women', 1)
+INSERT INTO Category VALUES ('Footwear - Kid', 1)
+INSERT INTO Category VALUES ('Clothing - Men', 1)
 INSERT INTO Category VALUES ('Clothing - Women', 1)
 INSERT INTO Category VALUES ('Clothing - Kid', 1)
 INSERT INTO Category VALUES ('Sports', 1)
