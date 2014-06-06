@@ -1,4 +1,4 @@
-<customErrors mode=on>
+<customErrors mode="On"> mode="RemoteOnly"
 session cookieless
 trace enable=on
-validRequest
+validateRequest=false

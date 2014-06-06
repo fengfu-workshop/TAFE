@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Navigation.html">Navigation</a></td></tr>
+<tr><td><a href="FindProducts-All.html">FindProducts - All</a></td></tr>
+<tr><td><a href="FindProducts-Nike.html">FindProducts - Nike</a></td></tr>
+<tr><td><a href="FindProducts-Category.html">FindProducts - Category</a></td></tr>
+<tr><td><a href="Contact.html">Contact</a></td></tr>
+<tr><td><a href="Login-Fail.html">Login-Fail</a></td></tr>
+<tr><td><a href="Login-Success.html">Login-Success</a></td></tr>
+<tr><td><a href="InsertCategory.html">Insert Category</a></td></tr>
+<tr><td><a href="EditCategory.html">EditCategory</a></td></tr>
+<tr><td><a href="DeleteCategory.html">Delete Category</a></td></tr>
+<tr><td><a href="ShoppingCart.html">ShoppingCart</a></td></tr>
+<tr><td><a href="InsertItem.html">InsertItem</a></td></tr>
+<tr><td><a href="EditItem.html">EditItem</a></td></tr>
+<tr><td><a href="DeteleItem.html">DeleteItem</a></td></tr>
+</tbody></table>
+</body>
+</html>

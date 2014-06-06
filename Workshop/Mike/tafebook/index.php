@@ -77,7 +77,7 @@ else if (isset($_POST["register-submit"])) {
                         <fieldset>
                             <p>
                                 <label for="login-email">Email:</label>
-                                <input type="text" id="login-email" name="login-email" placeholder="Email" maxlength="50" />
+                                <input type="text" id="login-email" name="login-email" placeholder="Email" value='<?php echo $email ?>' maxlength="50" />
                             </p>
                             <p>
                                 <label for="login-password">Password:</label>
@@ -96,7 +96,7 @@ else if (isset($_POST["register-submit"])) {
                         <fieldset>
                             <p>
                                 <label for="register-email">Email:</label>
-                                <input type="text" id="register-email" name="register-email" placeholder="Email" maxlength="50" />
+                                <input type="text" id="register-email" name="register-email" placeholder="Email" value='<?php echo $email ?>' maxlength="50" />
                             </p>
                             <p>
                                 <label for="register-password">Password:</label>

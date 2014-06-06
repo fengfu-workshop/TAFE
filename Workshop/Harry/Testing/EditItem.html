@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:1490/" />
+<title>EditItem</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EditItem</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Management</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Items</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ContentPlaceHolder1_txtProduct</td>
+	<td>Garmin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ContentPlaceHolder1_btnFindProduct</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ContentPlaceHolder1_ListView1_EditButton_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ContentPlaceHolder1_ListView1_QuantityTextBox_0</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ContentPlaceHolder1_ListView1_UpdateButton_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='ContentPlaceHolder1_ListView1_itemPlaceholderContainer']/div/div/h5[2]</td>
+	<td>17</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

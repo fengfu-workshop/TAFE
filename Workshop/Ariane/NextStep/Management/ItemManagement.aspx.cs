@@ -31,7 +31,7 @@ public partial class Management_ItemManagement : BasePage
         category.Expires = DateTime.Now.AddDays(7);
         category.Value = ddlCategory.SelectedValue;
         Response.Cookies.Add(category);
-        Response.Redirect(Request.Url.ToString());
+        //Response.Redirect(Request.Url.ToString());
     }
 
     protected void btnInsert_Click(object sender, EventArgs e)
@@ -62,6 +62,7 @@ public partial class Management_ItemManagement : BasePage
         if (e.CommandName == "Edit")
         {
             ListView1.InsertItemPosition = InsertItemPosition.None;
+            btnInsert.Text = "Insert Item";
         }
         else if (e.CommandName == "Delete")
         {
@@ -160,6 +161,11 @@ public partial class Management_ItemManagement : BasePage
 
     protected void btnFindProduct_Click(object sender, EventArgs e)
     {
+
+        ListView1.InsertItemPosition = InsertItemPosition.None;
+        btnInsert.Text = "Insert Item";
+        ListView1.EditIndex = -1;
+
         //if (ddlCategory.SelectedIndex == 0)
         //    ItemSource.SelectCommand = "SELECT * FROM [Item] WHERE ([ItemName] LIKE '%' + @ItemName + '%')";
         //else
@@ -176,7 +182,7 @@ public partial class Management_ItemManagement : BasePage
             ListItem item = ddlCategory.Items.FindByValue(category);
             if (item != null) item.Selected = true;
         }
-        btnFindProduct_Click(sender, e);
+        //btnFindProduct_Click(sender, e);
     }
 
     protected void ddlCategoryEdit_DataBound(object sender, EventArgs e)
@@ -197,6 +203,6 @@ public partial class Management_ItemManagement : BasePage
         product.Expires = DateTime.Now.AddDays(7);
         product.Value = txtProduct.Text;
         Response.Cookies.Add(product);
-        Response.Redirect(Request.Url.ToString());
+        //Response.Redirect(Request.Url.ToString());
     }
 }

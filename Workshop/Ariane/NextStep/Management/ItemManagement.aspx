@@ -13,7 +13,7 @@
                     <asp:DropDownList ID="ddlCategory" runat="server" DataSourceID="CategorySource" DataTextField="CategoryName" DataValueField="CategoryId" Height="20px" Width="139px" OnDataBound="ddlCategory_DataBound" OnSelectedIndexChanged="ddlCategory_SelectedIndexChanged"></asp:DropDownList>
             Product Name:<asp:TextBox ID="txtProduct" runat="server" Width="190px" Height="22px" OnTextChanged="txtProduct_TextChanged"></asp:TextBox>
             <%--<asp:Label ID="lblDebug" runat="server" Text="Label"></asp:Label>--%>
-            <asp:LinkButton ID="btnFindProduct" runat="server" Text="Find Products" OnClick="btnFindProduct_Click" />
+            <asp:LinkButton ID="btnFindProduct" runat="server" Text="Find Products" OnClick="btnFindProduct_Click" CausesValidation="False" />
 
         </div>
 

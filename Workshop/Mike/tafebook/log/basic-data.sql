@@ -204,5 +204,5 @@ INSERT INTO friendship (personId1, personId2) VALUES (3, 6);
 INSERT INTO friendship (personId1, personId2) VALUES (6, 3);
 
 INSERT INTO post (personId, postDateTime, post) VALUES (1, '2014-5-31', 'How can I see the specific value of the sql_mode?');
-INSERT INTO post (personId, postDateTime, post) VALUES (2, '2014-6-1', 'Building Dynamic Websites with PHP and MySQL');
+INSERT INTO post (personId, postDateTime, post) VALUES (2, '2014-6-1', 'How to Build a Dynamic Websites with PHP and MySQL?');
 INSERT INTO post (personId, postDateTime, post) VALUES (3, '2014-6-2', 'Froala Editor is an easy to include and easy to use plugin');

@@ -53,11 +53,11 @@
 	}
 
 	function displayErrors($errors) {
-		echo "<div class = 'error'>";
+		echo "<div class = 'error'> <ul>";
 		foreach ($errors as $error) {
-			echo "<p>$error</p>";
+			echo "<li>$error</li>";
 		}
-		echo "</div>";
+		echo "</ul></div>";
 
 	}
  ?>

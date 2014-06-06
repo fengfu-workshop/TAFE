@@ -1,0 +1,721 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<!-- Contact Form --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Contact</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Contact Us</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbFirstName</td>
+			<td>Tiger</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbLastName</td>
+			<td>Woods</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbContactNumber</td>
+			<td>12345678</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbEmailAddress</td>
+			<td>tiger.woods@nomail.com</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbQuestion</td>
+			<td>Well done</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnSubmit</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Delete Category --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Delete Category</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/Management/CategoryManagement.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Online Store</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Category</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>click</td>
+			<td>id=ContentPlaceHolder1_GridView1_LinkButton2_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertConfirmation</td>
+			<td>Are you sure you want to delete this Category?</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Delete Item --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">DeleteItem</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Items</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ddlCategory</td>
+			<td>label=All Category</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td>Garmin</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td>G</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td>Garmin</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>click</td>
+			<td>id=ContentPlaceHolder1_ListView1_DeleteButton_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertConfirmation</td>
+			<td>Are you sure you want to delete this product?</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Edit Category --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">EditCategory</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Category</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_LinkButton1_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>name=ctl00$ContentPlaceHolder1$GridView1$ctl02$ctl00</td>
+			<td>Test Modified</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_LinkButton1_0</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Edit Item --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">EditItem</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Items</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td>Garmin</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_EditButton_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ListView1_QuantityTextBox_0</td>
+			<td>17</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_UpdateButton_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertText</td>
+			<td>//div[@id='ContentPlaceHolder1_ListView1_itemPlaceholderContainer']/div/div/h5[2]</td>
+			<td>17</td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Find Products - find all products --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">FindProducts - All</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/WebPages/ItemsSearch.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Find Products - by category --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">FindProducts - Category</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/WebPages/ItemsSearch.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Products</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ddlCategory</td>
+			<td>label=Footwear - Men</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ddlCategory</td>
+			<td>label=Footwear - Women</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ddlCategory</td>
+			<td>label=Clothing - Kid</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Find Products - with product name and category --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">FindProducts - Nike</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/WebPages/ItemsSearch.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Products</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_txtProduct</td>
+			<td>nike</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertText</td>
+			<td>id=ContentPlaceHolder1_ListView1_ItemNameLabel_0</td>
+			<td>Nike Free Trainer 5.0 Men's Running Shoes</td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Insert Category --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Insert Category</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/Management/Management.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=img.logo</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Category</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_DetailsView1_txtCategory</td>
+			<td>Test</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Insert</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertText</td>
+			<td>//table[@id='ContentPlaceHolder1_GridView1']/tbody/tr[2]/td[3]</td>
+			<td>Test</td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Insert Item --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">InsertItem</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Items</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnInsert</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ListView1_ItemNameTextBox</td>
+			<td>Garmin Vivofit Fitness Band HRM Bundle</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ListView1_PriceTextBox</td>
+			<td>199</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ListView1_QuantityTextBox</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ListView1_FileUpload1</td>
+			<td>C:\Temp\35390301-zoom.jpg</td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ListView1_ddlCategoryEdit</td>
+			<td>label=Gift Card</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_InsertButton</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnInsert</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Last</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Login - Fail login --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Login-Fail</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_Login1_UserName</td>
+			<td>Tiger</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_Login1_Password</td>
+			<td>12345678</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_Login1_LoginButton</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertText</td>
+			<td>css=p.error</td>
+			<td>Your login attempt was not successful. Please try again.</td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Login - Successful login --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Login-Success</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/Management/Login.aspx?ReturnUrl=%2fManagement%2fManagement.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=img.logo</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_Login1_UserName</td>
+			<td>admin</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_Login1_Password</td>
+			<td>password!</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_Login1_LoginButton</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>assertText</td>
+			<td>id=LoginStatus2</td>
+			<td>Logout</td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Navigation - Navigate major parts of NEXTSTEP website --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">Navigation</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/Management/Login.aspx?ReturnUrl=%2fManagement%2fManagement.aspx</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=img.logo</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=About</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Products</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Contact Us</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Shopping Cart - View shopping cart, edit cart content and checkout --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">ShoppingCart</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=img.logo</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Products</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ContentPlaceHolder1_ddlCategory</td>
+			<td>label=All Category</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnFindProduct</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_imgAddToCart_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_imgAddToCart_1</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ListView1_imgAddToCart_2</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=lblNumProducts</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_lbPlusOne_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_lbPlusOne_0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_lbPlusOne_1</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_lbPlusOne_2</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_GridView1_lbMinusOne_1</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_lbCheckOut</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbFirstName</td>
+			<td>Tommy</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbLastName</td>
+			<td>Jones</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbFirstName</td>
+			<td>Michael</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbLastName</td>
+			<td>Jordan</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbAddress</td>
+			<td>10 basket ball street Chicago</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbContactNumber</td>
+			<td>12345678</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbEmailAddress</td>
+			<td>michael.jordan@nomail.com</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbCreditCard</td>
+			<td>1111-1111-1111-1111</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbExpiry</td>
+			<td>12/1/2021</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_tbNameOnCard</td>
+			<td>Name1</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_btnSubmit</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+</body>
+</html>
