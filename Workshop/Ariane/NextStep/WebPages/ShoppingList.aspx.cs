@@ -140,6 +140,7 @@ public partial class WebPages_ShoppingList : System.Web.UI.Page
             if (SaveOrder())
             {
                 ShoppingCart Cart = (ShoppingCart)Session["Cart"];
+                Cart.SaveCartDetails(PrimaryKey);
                 pnlCheckout.Visible = false;
                 pnlList.Visible = false;
                 pnlPurchased.Visible = true;

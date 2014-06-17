@@ -22,6 +22,8 @@
 <tr><td><a href="InsertItem.html">InsertItem</a></td></tr>
 <tr><td><a href="EditItem.html">EditItem</a></td></tr>
 <tr><td><a href="DeteleItem.html">DeleteItem</a></td></tr>
+<tr><td><a href="ChangeTheme.html">ChangeTheme</a></td></tr>
+<tr><td><a href="ChangePassword.html">ChangePassword</a></td></tr>
 </tbody></table>
 </body>
 </html>

@@ -717,5 +717,116 @@
 
 	</tbody></table>
 
+	<!-- Staff selected themes --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">ChangeTheme</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Category</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ddlTheme</td>
+			<td>label=Forest</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=option[value=&quot;Forest&quot;]</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>select</td>
+			<td>id=ddlTheme</td>
+			<td>label=Space</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>css=option[value=&quot;Space&quot;]</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
+	<!-- Change Password --><br /><br />
+	<table cellpadding="1" cellspacing="1" border="1">
+		<thead>
+			<tr><td rowspan="1" colspan="3">ChangePassword</td></tr>
+		</thead><tbody>
+		<tr>
+			<td>open</td>
+			<td>/</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=Management</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>link=[Hello, guest ]</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_CurrentPassword</td>
+			<td>123456</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_NewPassword</td>
+			<td>guest</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_ConfirmNewPassword</td>
+			<td>guest</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_ChangePasswordPushButton</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_CurrentPassword</td>
+			<td>123456</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_NewPassword</td>
+			<td>password</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_ConfirmNewPassword</td>
+			<td>password</td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_ChangePasswordPushButton</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>clickAndWait</td>
+			<td>id=ContentPlaceHolder1_ChangePassword1_SuccessContainerID_ContinuePushButton</td>
+			<td></td>
+		</tr>
+
+	</tbody></table>
+
 </body>
 </html>

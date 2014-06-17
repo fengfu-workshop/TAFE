@@ -152,5 +152,11 @@
             <br /><br />
         </asp:Panel>
     </div>
+
+    <script>
+        $(function () {
+            $(".hnav a:contains('Product')").addClass("active");
+        });
+    </script>
 </asp:Content>
 

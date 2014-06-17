@@ -124,6 +124,12 @@ nav a:hover {
     box-shadow: inset 0 0 8px 2px #EEE;
 }
 
+.active {
+    color: #F5861F;
+    -webkit-box-shadow: inset 0 0 4px 1px #EEE;
+    box-shadow: inset 0 0 4px 1px #EEE;
+}
+
 header a:hover {
    color: red;
 }

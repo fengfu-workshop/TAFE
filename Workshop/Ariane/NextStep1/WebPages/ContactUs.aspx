@@ -40,10 +40,12 @@
         <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowModelStateErrors="False" ShowSummary="False" CssClass="error" />
     </asp:Panel>
-    <asp:Panel ID="pnlMailSent" CssClass="shadow_box w500" runat="server" Visible="False">
+    <asp:Panel ID="pnlMailSent" CssClass="shadow_box w500 h300" runat="server" Visible="false">
+        <br /><br />
         <asp:Label ID="Label1" runat="server" Text="Thank you for your question. We will back to you soon."></asp:Label>
         <br /><br />
-        <a href="/">Back to home</a>
+        <a href="/">[Back to home]</a>  <a href="/WebPages/ItemsSearch.aspx">[Go shopping]</a>
+
     </asp:Panel>
 </asp:Content>
 

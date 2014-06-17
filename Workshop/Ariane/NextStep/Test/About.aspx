@@ -7,5 +7,10 @@
         <img src="/images/Information.png" alt="Information" />
         <h2>About NextStep</h2>
     </div>
+    <script>
+        $(function () {
+            $(".hnav a:contains('About')").addClass("active");
+        });
+    </script>
 </asp:Content>
 

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Item Details" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="ItemDetails.aspx.cs" Inherits="Test_ItemDetails" %>
-
+<%--<%@ MasterType VirtualPath="~/MasterPages/NextStep.master" %>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -26,6 +26,7 @@
                     Price:
                     <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
                     <br />
+                    <br />
                     In Stock:
                     <asp:Label ID="QuantityLabel" runat="server" Text='<%# Eval("Quantity") %>' />
                     <br />
@@ -36,9 +37,11 @@
                     <div class="shopping_cart">
                         Quantity:
                         <asp:TextBox ID="txtQuantity" runat="server" Text="1"></asp:TextBox>
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please enter a valid quantity (1-99)" ControlToValidate="txtQuantity" CssClass="error" Type="Integer" MaximumValue="99" MinimumValue="1"></asp:RangeValidator>
                         <br />
                         <br />
-                        <a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>
+                        <%--<a><asp:ImageButton ID="imgAddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" /></a>--%>
+                        <asp:ImageButton ID="ImageButton1" CommandName="AddToCart" CommandArgument='<%# Eval("ItemId") %>' runat="server" ImageUrl="~/Images/AddToCart.png" AlternateText="Photo coming soon" CssClass="cart_button"/>
                     </div>
 
                 </div>

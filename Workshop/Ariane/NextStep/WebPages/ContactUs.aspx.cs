@@ -30,7 +30,12 @@ public partial class Test_ContactUs : System.Web.UI.Page
             myMessage.From = new MailAddress("contact@nextstep.com", "NextStep Sales");
             myMessage.To.Add(new MailAddress("information@sportsshop.com.au", "Information"));
             myMessage.ReplyToList.Add(new MailAddress(tbEmailAddress.Text));
+
             SmtpClient mySmtpClient = new SmtpClient();
+            if (!String.IsNullOrEmpty(mySmtpClient.PickupDirectoryLocation) && !Directory.Exists(mySmtpClient.PickupDirectoryLocation))
+            {
+                Directory.CreateDirectory(mySmtpClient.PickupDirectoryLocation);
+            }
             mySmtpClient.Send(myMessage);
             pnlMailSent.Visible = true;
             palContactForm.Visible = false;

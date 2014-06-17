@@ -242,6 +242,10 @@ footer {
     width: 500px;
 }
 
+.h300 {
+    height: 300px;
+}
+
 .shadow_box {
     padding: 0 20px;
     background-color: white;
@@ -331,6 +335,8 @@ footer {
 }
 
 .item_thumb {
+    position: relative;
+    overflow: hidden;
     float: left;
     /*display: inline-block;*/
     width: 180px;
@@ -347,8 +353,37 @@ footer {
     margin: 10px;
 }
 
+.item_thumb .description {
+    overflow: hidden;
+    height: 50px;
+}
+
+.item_thumb .preview {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    border: 1px solid #EEE;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/*.item_thumb .preview:hover {
+    width: 50px;
+    height: 50px;
+    -webkit-box-shadow: 2px 2px 5px 2px #AAA;
+    box-shadow: 2px 2px 5px 2px #AAA;
+}*/
+
 .item_thumb .price input[type="image"] {
     height: 30px;
+}
+
+.item_thumb div {
+    height: 50px;
 }
 
 .item_thumb .price * {
@@ -391,20 +426,21 @@ footer {
     /*line-height: 50px;*/
 }
 
-.shopping_cart img {
-    vertical-align: middle;
+.shopping_cart .cart_button {
+    /*vertical-align: middle;*/
+    display: inline-block;
+    padding: 5px;    
     height: 50px;
 }
 
-.shopping_cart a {
-    display: inline-block;
-    padding: 5px;
-}
-
-.shopping_cart a:hover {
+.shopping_cart .cart_button:hover {
     box-shadow: inset 0 0 8px 2px #5979AC;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
+}
+
+.shopping_cart input[type=text] {
+    width: 30px;
 }
 
 /*
@@ -475,8 +511,8 @@ footer {
 
 .shopping_list table {
     margin: 10px auto;
-    /*border: 1px solid #5979AC;*/
-    /*border-collapse:collapse;*/
+    border: 1px solid #5979AC;
+    border-collapse:collapse;
     /*border-spacing:10px 10px;*/
 }
 

@@ -168,7 +168,7 @@
     </div>
     <%--        </ContentTemplate>
     </asp:UpdatePanel>--%>
-    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId], [Active]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId, 1)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId, [Active] = @Active WHERE [ItemId] = @ItemId">
+    <asp:SqlDataSource ID="ItemSource" runat="server" OnDeleted="OnRecordDeleted" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" DeleteCommand="DELETE FROM [Item] WHERE [ItemId] = @ItemId" InsertCommand="INSERT INTO [Item] ([ItemName], [Price], [PhotoName], [PhotoGuid], [Quantity], [Description], [CategoryId], [Active]) VALUES (@ItemName, @Price, @PhotoName, @PhotoGuid, @Quantity, @Description, @CategoryId, 1)" SelectCommand="SELECT * FROM [Item] WHERE ( ([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))" UpdateCommand="UPDATE [Item] SET [ItemName] = @ItemName, [Price] = @Price, [PhotoName] = @PhotoName, [PhotoGuid] = @PhotoGuid, [Quantity] = @Quantity, [Description] = @Description, [CategoryId] = @CategoryId, [Active] = @Active WHERE [ItemId] = @ItemId">
         <DeleteParameters>
             <asp:Parameter Name="ItemId" Type="Int32" />
         </DeleteParameters>
@@ -199,6 +199,11 @@
         </UpdateParameters>
     </asp:SqlDataSource>
     <asp:SqlDataSource ID="CategorySource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+    <script>
+        $(function () {
+            $("nav a:contains('Items')").addClass("active");
+        });
+    </script>
 </asp:Content>
 
 

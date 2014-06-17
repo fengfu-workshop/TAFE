@@ -67,6 +67,10 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     </div>
-
+    <script>
+        $(function () {
+            $("nav a:contains('Category')").addClass("active");
+        });
+    </script>
 </asp:Content>
 

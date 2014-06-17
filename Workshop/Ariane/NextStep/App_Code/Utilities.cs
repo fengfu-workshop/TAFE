@@ -90,6 +90,20 @@ public class ShoppingCart
         return sum;
     }
 
+    public Boolean SaveCartDetails(string orderId)
+    {
+        SqlDataSource srcOrderDetails;
+        srcOrderDetails = new SqlDataSource();
+        srcOrderDetails.ConnectionString = WebConfigurationManager.ConnectionStrings["NextStepConnectionString"].ConnectionString;
+
+        foreach (KeyValuePair<string, Product> item in Products)
+        {
+            srcOrderDetails.InsertCommand = "INSERT INTO [OrderDetail] ([OrderId], [ItemId], [Quantity]) VALUES (" + orderId + "," + item.Value.ItemId + "," + item.Value.Quantity.ToString() + ")";
+            if (srcOrderDetails.Insert() != 1) return false;
+        }
+        return true;
+    }
+
 }
 
 public class CreditCard

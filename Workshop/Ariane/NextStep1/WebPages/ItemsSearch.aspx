@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Search Products" Language="C#" MasterPageFile="~/MasterPages/NextStep.master" AutoEventWireup="true" CodeFile="ItemsSearch.aspx.cs" Inherits="Test_ItemsSearch" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="../StyleSheets/colorbox.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -20,21 +21,26 @@
             <asp:ListView ID="ListView1" runat="server" DataKeyNames="ItemId" DataSourceID="ItemSource" OnItemCommand="ListView1_ItemCommand">
                 <EmptyDataTemplate>
                     <p>No product found.</p>
+                    <br />
                     <p>Select Category, type in part of product name and press &lt;Find Products&gt; to begin your search</p>
                 </EmptyDataTemplate>
 
                 <ItemTemplate>
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
+                    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">--%>
+                        <%--<ContentTemplate>--%>
                             <div class="item_thumb shadow_box">
                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("ItemId", "~/WebPages/ItemDetails.aspx?Id={0}") %>'>
                                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("PhotoGuid", "~/Images/Thumbs/{0}") %>' AlternateText="Photo coming soon" />
                                 </asp:HyperLink>
+                                <a href="#">
+                                    <asp:Image ID="Image2" CssClass="preview" runat="server" ImageUrl='<%# Eval("PhotoGuid", "~/Images/Thumbs/{0}") %>' AlternateText='<%# Eval("ItemName") %>' />
+                                </a>
                                 <asp:Label ID="lblItemId" runat="server" Text='<%# Eval("ItemId") %>' Visible="False"></asp:Label>
                                 <asp:Label ID="lblPhotoGuid" runat="server" Text='<%# Eval("PhotoGuid") %>' Visible="False"></asp:Label>
-                                <asp:Label ID="ItemNameLabel" runat="server" Text='<%# Eval("ItemName") %>' />
-                                <br />
-                                <br />
+                                <div class="description">
+                                    <asp:Label ID="ItemNameLabel" runat="server" Text='<%# Eval("ItemName") %>' />
+                                </div>
+
                                 <div class="price">
                                     <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
                                     <%--<asp:Button ID="Button1" runat="server"  CommandName="find" Text="Add To Cart" />--%>
@@ -42,8 +48,8 @@
                                 </div>
                             </div>
 
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+                        <%--</ContentTemplate>--%>
+                    <%--</asp:UpdatePanel>--%>
                 </ItemTemplate>
                 <LayoutTemplate>
                     <div class="pager custom_button">
@@ -55,7 +61,7 @@
                             </Fields>
                         </asp:DataPager>
                     </div>
-                    <div class="clear_fix">
+                    <div id="Product_Holder" class="clear_fix">
                         <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
                     </div>
                     <div class="pager custom_button">
@@ -71,14 +77,46 @@
 
 
             </asp:ListView>
+
         </div>
     </div>
-    <asp:SqlDataSource ID="CategorySource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName] FROM [Category]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%'))">
+    <asp:SqlDataSource ID="CategorySource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT [CategoryId], [CategoryName], [Active] FROM [Category] WHERE [Active] = 'true'"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="ItemSource" runat="server" ConnectionString="<%$ ConnectionStrings:NextStepConnectionString %>" SelectCommand="SELECT * FROM [Item] WHERE (([CategoryId] = @CategoryId OR 0 = @CategoryId) AND ([ItemName] LIKE '%' + @ItemName + '%') AND [Active] = 'true')">
         <SelectParameters>
             <asp:ControlParameter ControlID="ddlCategory" Name="CategoryId" PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
             <asp:ControlParameter ControlID="txtProduct" Name="ItemName" PropertyName="Text" Type="String" DefaultValue=" " />
         </SelectParameters>
     </asp:SqlDataSource>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$('.preview').click(function (e) {
+            $('#Product_Holder').on('mouseenter', '.preview', function (e) {
+                $(this).addClass('shadow_box').animate({ width: '50px', height: '50px' });
+            });
+            $('#Product_Holder').on('mouseleave', '.preview', function (e) {
+                $(this).removeClass('shadow_box').animate({ width: '40px', height: '40px' });
+            });
+            $('#Product_Holder').on('click', '.preview', function (e) {
+                e.preventDefault();
+                var maxWidth = $(window).height() - 100;
+                var src = $(this).attr('src');
+                src = src.replace("Thumbs", "Items");
+                $.colorbox({
+                    href: src,
+                    maxWidth: maxWidth,
+                    photo: true,
+                    title: $(this).attr('alt'),
+                    speed: 100,
+                    onComplete: function () {
+                        $('.cboxPhoto').click(function () {
+                            $.colorbox.close();
+                        });
+                    }
+                });
+
+            });
+        });
+    </script>
+
 </asp:Content>
 

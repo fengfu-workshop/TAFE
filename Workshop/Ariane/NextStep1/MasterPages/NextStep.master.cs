@@ -15,6 +15,11 @@ public partial class MasterPages_NextStep : System.Web.UI.MasterPage
     }
     protected void Page_PreRender(object sender, EventArgs e)
     {
+        UpdateCartTotalNumber();
+    }
+
+    public void UpdateCartTotalNumber()
+    {
         ShoppingCart Cart = (ShoppingCart)Session["Cart"];
         lblNumProducts.Text = Cart.TotalProducts().ToString();
     }

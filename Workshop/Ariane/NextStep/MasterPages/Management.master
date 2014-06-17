@@ -31,7 +31,7 @@
                         <asp:ListItem>Space</asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <a href="/">Online Store</a>
+                <a href="/WebPages/ItemsSearch.aspx">Online Store</a>
 			    <a href="/Management/CategoryManagement.aspx">Category</a>
 			    <a href="/Management/ItemManagement.aspx">Items</a>
 			    <a href="/UnderConstruction.aspx">News</a>

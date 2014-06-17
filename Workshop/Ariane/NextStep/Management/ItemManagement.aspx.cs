@@ -205,4 +205,17 @@ public partial class Management_ItemManagement : BasePage
         Response.Cookies.Add(product);
         //Response.Redirect(Request.Url.ToString());
     }
+    protected void OnRecordDeleted(object source, SqlDataSourceStatusEventArgs e)
+    {
+
+        if (e.Exception != null)
+        {
+            if (e.Exception.Message.Contains("REFERENCE"))
+            {
+                e.ExceptionHandled = true;
+                Response.Write(@"<script language='javascript'>alert('\nThis item can not be deleted,\n because it is referenced by other order(s)');</script>");
+            }
+
+        }
+    }
 }

@@ -61,6 +61,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('.item_left').zoom({ url: $('#ContentPlaceHolder1_ListView1_Image1_0').attr('href'), on: 'mouseover' });
+            $(".hnav a:contains('Product')").addClass("active");
         });
     </script>
 </asp:Content>

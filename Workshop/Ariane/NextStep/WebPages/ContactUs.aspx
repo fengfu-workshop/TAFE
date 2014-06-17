@@ -47,5 +47,11 @@
         <a href="/">[Back to home]</a>  <a href="/WebPages/ItemsSearch.aspx">[Go shopping]</a>
 
     </asp:Panel>
+    
+    <script>
+        $(function () {
+            $(".hnav a:contains('Contact')").addClass("active");
+        });
+    </script>
 </asp:Content>
 

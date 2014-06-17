@@ -97,5 +97,11 @@
             <a href="UnderConstruction.aspx">More ...</a>
         </section>
     </div>
+
+    <script>
+        $(function () {
+            $(".hnav a:contains('Home')").addClass("active");
+        });
+    </script>
 </asp:Content>
 

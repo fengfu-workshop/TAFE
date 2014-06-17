@@ -119,6 +119,12 @@ header a:hover {
    color: red;
 }
 
+.active {
+    color: #F5861F;
+    -webkit-box-shadow: inset 0 0 4px 1px #EEE;
+    box-shadow: inset 0 0 4px 1px #EEE;
+}
+
 .theme {
     float: right;
     margin: 10px;

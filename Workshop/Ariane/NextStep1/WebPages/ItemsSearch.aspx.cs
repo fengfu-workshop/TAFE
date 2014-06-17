@@ -37,7 +37,7 @@ public partial class Test_ItemsSearch : System.Web.UI.Page
         category.Expires = DateTime.Now.AddDays(7);
         category.Value = ddlCategory.SelectedValue;
         Response.Cookies.Add(category);
-        Response.Redirect(Request.Url.ToString());
+        //Response.Redirect(Request.Url.ToString());
     }
     protected void btnFindProduct_Click(object sender, EventArgs e)
     {
@@ -54,7 +54,7 @@ public partial class Test_ItemsSearch : System.Web.UI.Page
         product.Expires = DateTime.Now.AddDays(7);
         product.Value = txtProduct.Text;
         Response.Cookies.Add(product);
-        Response.Redirect(Request.Url.ToString());
+        //Response.Redirect(Request.Url.ToString());
     }
 
     protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
@@ -82,7 +82,8 @@ public partial class Test_ItemsSearch : System.Web.UI.Page
 
             Cart.AddProduct(prd);
 
-            Response.Redirect(Request.RawUrl); // Force refresh page inside Update Panel
+            //((MasterPages_NextStep)Page.Master).UpdateCartTotalNumber();
+            Response.Redirect(Request.RawUrl); 
         }
     }
 }

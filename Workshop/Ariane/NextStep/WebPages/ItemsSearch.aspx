@@ -89,6 +89,8 @@
     </asp:SqlDataSource>
     <script type="text/javascript">
         $(document).ready(function () {
+            $(".hnav a:contains('Product')").addClass("active");
+
             //$('.preview').click(function (e) {
             $('#Product_Holder').on('mouseenter', '.preview', function (e) {
                 $(this).addClass('shadow_box').animate({ width: '50px', height: '50px' });
